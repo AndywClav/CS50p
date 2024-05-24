@@ -1,2 +1,2 @@
-words = input('Write please any choose 😄: ').lower
-wor
+words = input('Write please any choose 😄: ').lower()
+print(words)
