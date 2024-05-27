@@ -1,3 +1,3 @@
 name = input('Write Anything: ')
-result = name.strip('')
+result = name.replace(" ", "...")
 print(result)
