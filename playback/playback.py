@@ -1,3 +1,1 @@
-name = input('Write Anything: ')
-result = name.replace(" ", "...")
-print(result)
+print(input('Write Anything: ').replace(" ", "..."))
