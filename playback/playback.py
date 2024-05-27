@@ -1,2 +1,2 @@
-name = input('')
+name = input('Write Anything: ').strip('...')
 print(name)
