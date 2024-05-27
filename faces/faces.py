@@ -1,5 +1,5 @@
 
-def convert (str):
-    input(str)
+def convert ():
+    input()
 
 convert()
