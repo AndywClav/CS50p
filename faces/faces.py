@@ -1,1 +1,4 @@
-# def convert ():
+def convert ():
+    input('')
+
+convert()
