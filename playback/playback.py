@@ -1,2 +1,2 @@
-name = input('Write Anything: ').strip('...')
+name = input('Write Anything: ').ljust('...')
 print(name)
