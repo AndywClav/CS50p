@@ -4,4 +4,4 @@ def convert (str):
     str = chr(ord(code))
     input(str)
 
-convert(':(')
+convert(':)')
