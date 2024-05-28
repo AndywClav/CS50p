@@ -1,6 +1,7 @@
 
-def convert (str):
-    str = chr(\u1F642)
-    input(str)
+def convert ():
+    code = u1F642
+    h = chr(code)
+    input(h)
 
 convert()
