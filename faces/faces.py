@@ -1,6 +1,6 @@
 
 def convert (str):
-    emoji = \u1F642
+    str = chr(\u1F642)
     input(str)
 
 convert()
