@@ -11,7 +11,7 @@ def convert ():
         return code
 
 def main ():
-    message = input( f'ingrese un mensaje ${convert()}')
+    message = input( f'ingrese un mensaje {convert()}')
     print(message)
 
 main()
