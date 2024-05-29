@@ -4,9 +4,14 @@ def convert ():
     sad = '\U0001F641' # Buscar la forma de colocar caras sin condicionales
     str = input()
     if (str == ':)'):
-        print(chr(ord(happy)))
+        code = print(chr(ord(happy)))
+        return code
     elif (str == ':('):
-        print(chr(ord(sad)))
+        code = print(chr(ord(sad)))
+        return code
 
+def main ():
+    message = input( f'ingrese un mensaje ${convert()}')
+    print(message)
 
-convert()
+main()
