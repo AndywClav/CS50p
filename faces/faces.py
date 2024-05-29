@@ -8,7 +8,11 @@ def convert (emoji):
 
 def main ():
     message = input(': ')
-    if (message)
-    print(message,)
+    if (message == 'Hello :)'):
+        emoji = convert(':)')
+        print('Hello', emoji)
+    elif (message == 'Goodbye :('):
+        emoji = convert(':(')
+        print('Goodbye', emoji)
 
 main()
