@@ -14,7 +14,10 @@ def main ():
     elif (message == 'Goodbye :('):
         emoji = convert(':(')
         print('Goodbye', emoji)
-    elif (message == 'Goodbye :('):
-        emoji = convert(':(')
-        print('Goodbye', emoji)
+    elif (message == 'Hello :) Goodbye :('):
+        emojiH = convert(':)')
+        emojiS = convert(':(')
+        print('Hello', emojiH, 'Goodbye', emojiS)
+    else:
+        return None
 main()
