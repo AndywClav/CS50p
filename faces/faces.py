@@ -7,12 +7,11 @@ def convert (emoji):
     return emoji
 
 def main ():
-    message = input(': ')
+    message = input(': ' or )
     if (message == 'Hello :)'):
         emoji = convert(':)')
         print('Hello', emoji)
     elif (message == 'Goodbye :('):
         emoji = convert(':(')
         print('Goodbye', emoji)
-
 main()
