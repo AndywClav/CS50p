@@ -7,8 +7,8 @@ def convert (emoji):
     return emoji
 
 def main ():
-    emoji = ''
-    message = input(': ', emoji)
-    print(message, convert(emoji))
+    message = input(': ')
+    if (message)
+    print(message,)
 
 main()
