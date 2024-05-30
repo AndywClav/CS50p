@@ -1,7 +1,7 @@
 def main():
-    Mass = float(input('m: '))
-    SpeedLight = 300000000
-    Energy = Mass * pow(SpeedLight, 2)
-    print(f"E: {Energy} \nIt's equal that E=mc²")
+    mass = float(input('m: '))
+    speed_of_light = 300000000
+    energy = mass * pow(speed_of_light, 2)
+    print(f"E: {energy} \nIt's equal that E=mc²")
 
 main()
