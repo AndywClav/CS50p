@@ -7,13 +7,15 @@ def main():
 
 def dollars_to_float(d):
     d.remove('$', '')
-    dollars = float(d:0.2)
+    dollars = float(d)
+    dollars = round(dollars, 2)
     return dollars
 
 
 
 def percent_to_float(p):
-    percent = d
+    p.remove('%', '')
+    percent = 
 
 
 main()
