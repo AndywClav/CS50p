@@ -7,8 +7,8 @@ def main():
 
 def dollars_to_float(d):
     d.remove('$')
-    dollars = float(d)
-    return dollars:0.2
+    dollars = float(d:0.2)
+    return dollars
 
 
 
