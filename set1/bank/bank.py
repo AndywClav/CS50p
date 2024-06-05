@@ -1,8 +1,9 @@
 ask = input("Greeting: ").lower()
 zero = ["hello"]
+twenty  = 'h' in ask
 
 if ask == zero[0]:
     print('$', 0)
-
-print('h' in ask)
+elif twenty == True:
+    print('$', 20)
 
