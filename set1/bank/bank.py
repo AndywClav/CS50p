@@ -5,7 +5,7 @@ findQ  = '?' in ask
 
 if findHello:
     print('$0')
-elif findH:
+elif findH and findQ == False:
     print('$20')
 elif findQ:
     print('$100')
