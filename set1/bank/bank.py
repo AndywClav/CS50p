@@ -4,5 +4,5 @@ zero = ["hello"]
 if ask == zero[0]:
     print('$', 0)
 
-print(ask in 'h')
+print('h' in ask)
 
