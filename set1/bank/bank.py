@@ -1,7 +1,7 @@
 ask = input("Greeting: ").lower()
 findHello  = 'hello' in ask
 findH  = 'h' in ask
-findQ  = '?' in ask
+findQ  = "what's" in ask
 
 if findHello:
     print('$0')
