@@ -1,9 +1,5 @@
 ask = input("Greeting: ").lower()
-zero = ["hello"]
-twenty  = 'h' in ask
+findHello  = 'hello' in ask
 
-if ask.replace(' ', '') == zero[0]:
+if ask == findHello:
     print('$0')
-elif twenty == True:
-    print('$20')
-
