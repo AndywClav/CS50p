@@ -1,3 +1,2 @@
-file = input("")
-file.replace(".", "/")
-print(file)
+fille = input(": ")
+print(fille.replace(".", "/"))
