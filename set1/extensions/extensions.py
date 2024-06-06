@@ -1,2 +1,2 @@
 fille = input(": ")
-print(fille.replace(".", "/"))
+print(fille.replace(".", "/").strip())
