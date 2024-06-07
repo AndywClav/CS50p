@@ -7,7 +7,7 @@ if len(FilleOut) == 2:
     subtipo = FilleOut[1]
     print("El subtipo ingresado es:", subtipo)
 else:
-    print("El formato ingresado no es válido.")
+    print("El formato ingresado no es válido.", FilleOut[0])
 
 # if 'gif' in FilleOut or 'jpg' in FilleOut or 'jpeg' in FilleOut or 'png' in FilleOut:
 #     print('image/')
