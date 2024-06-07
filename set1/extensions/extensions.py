@@ -4,7 +4,7 @@ part = filleOut.split('/')
 exten = part[1]
 
 if len(part) >= 2:
-    if 'gif' in filleOut or 'jpg' in filleOut or 'jpeg' in filleOut or 'png' in filleOut:
+    if 'gif' in filleOut or 'jpeg' in filleOut or 'png' in filleOut:
         print('image/' + exten)
     else:
         print('application/octet-stream')
