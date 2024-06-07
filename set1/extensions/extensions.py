@@ -7,7 +7,7 @@ if len(part) >= 2:
     if 'gif' in filleOut or 'jpg' in filleOut or 'jpeg' in filleOut or 'png' in filleOut:
         print('image/' + exten)
     else:
-        print('')
+        print('application/octet-stream')
 
 
 # the name the fille need change for image depend the format
