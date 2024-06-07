@@ -1,9 +1,9 @@
 filleIn = input("Fila name: ").lower().strip()
 FilleOut = filleIn.replace(".", "/")
 FilleOut.split('/')
+subtipo = FilleOut[0]
 
-
-print(FilleOut[0])
+print(subtipo)
 
 # # Verificar que se hayan ingresado exactamente dos partes
 # if len(FilleOut) > 2:
