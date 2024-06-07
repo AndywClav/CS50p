@@ -5,10 +5,14 @@ exten = part[1]
 
 if len(part) >= 2:
     match exten:
-        case 'gif' or 'jpeg' or 'png':
+        case 'gif' | 'jpeg' | 'png':
             print('image/' + exten)
         case 'jpg':
             print('image/jpeg')
+        case 'pdf':
+            print('application/' + exten)
+        case 'txt':
+            print('text/' + exten)
         case _:
             print('application/octet-stream')
 
