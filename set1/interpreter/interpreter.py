@@ -1,1 +1,1 @@
-calculator = float(input("Fila name: ")).strip()
+calculator = input("Expression: ").strip()

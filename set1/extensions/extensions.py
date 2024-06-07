@@ -15,7 +15,3 @@ if len(part) > 0:
             print('text/plain')
         case _:
             print('application/octet-stream')
-
-
-
-# the name the fille need change for image depend the format
