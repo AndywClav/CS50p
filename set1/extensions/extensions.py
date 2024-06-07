@@ -3,7 +3,7 @@ filleOut = filleIn.replace(".", "/")
 part = filleOut.split('/')
 exten = part[-1]
 
-if len(part) <= 2:
+if len(part) > 0:
     match exten:
         case 'gif' | 'jpeg' | 'png':
             print('image/' + exten)
