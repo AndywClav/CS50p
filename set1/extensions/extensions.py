@@ -1,9 +1,9 @@
-filleIn = input("Fila ame: ").lower().strip()
+filleIn = input("Fila name: ").lower().strip()
 FilleOut = filleIn.replace(".", "/")
 FilleOut.split('/')
 
 
-print(FilleOut[1])
+print(FilleOut[0])
 
 # # Verificar que se hayan ingresado exactamente dos partes
 # if len(FilleOut) > 2:
