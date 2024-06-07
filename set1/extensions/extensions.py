@@ -9,10 +9,10 @@ if len(part) >= 2:
             print('image/' + exten)
         case 'jpg':
             print('image/jpeg')
-        case 'pdf':
+        case 'pdf' | 'zip':
             print('application/' + exten)
         case 'txt':
-            print('text/' + exten)
+            print('text/plain')
         case _:
             print('application/octet-stream')
 
