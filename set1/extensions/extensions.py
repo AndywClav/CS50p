@@ -1,7 +1,7 @@
 filleIn = input("Fila ame: ").lower()
 FilleOut = filleIn.replace(".", "/").strip()
 if 'gif' in FilleOut or 'jpg' in FilleOut or 'jpeg' in FilleOut or 'png' in FilleOut:
-    print('img/')
+    print('image/')
 else:
     print('')
 
