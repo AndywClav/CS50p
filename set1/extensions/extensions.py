@@ -1,13 +1,13 @@
-filleIn = input("Fila ame: ").lower()
-FilleOut = filleIn.replace(".", "/").strip()
+filleIn = input("Fila ame: ").lower().strip()
+FilleOut = filleIn.replace(".", "/")
 FilleOut.split('/')
 
 # Verificar que se hayan ingresado exactamente dos partes
-if len(FilleOut) == 2:
+if len(FilleOut) > 2:
     subtipo = FilleOut[1]
-    print("El subtipo ingresado es:", subtipo)
+    print("El subtipo ingresado es:", subtipo, FilleOut)
 else:
-    print("El formato ingresado no es válido.", FilleOut[0])
+    print("El formato ingresado no es válido.", FilleOut)
 
 # if 'gif' in FilleOut or 'jpg' in FilleOut or 'jpeg' in FilleOut or 'png' in FilleOut:
 #     print('image/')
