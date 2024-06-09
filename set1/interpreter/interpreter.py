@@ -1,2 +1,3 @@
 calculator = input("Expression: ").strip()
-print(calculator)
+x = calculator.replace(" ", "")
+print(x)
