@@ -8,11 +8,20 @@ divis = '/' in calculator
 if sum == True:
     sepa = calculator.split('+')
     part = sepa
-    total = int(part[0]) + int(part[1])
-    print(calculator, total)
+    total = float(part[0]) + float(part[1])
+    print(total)
 elif sub == True:
-    print(calculator)
+    sepa = calculator.split('-')
+    part = sepa
+    total = float(part[0]) - float(part[1])
+    print(total)
 elif multi == True:
-    print(calculator)
+    sepa = calculator.split('*')
+    part = sepa
+    total = float(part[0]) * float(part[1])
+    print(total)
 elif divis == True:
-    print(calculator)
+    sepa = calculator.split('/')
+    part = sepa
+    total = float(part[0]) / float(part[1])
+    print(total)
