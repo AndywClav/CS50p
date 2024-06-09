@@ -4,11 +4,12 @@ sum = '+' in calculator
 sub = '-' in calculator
 multi = '*' in calculator
 divis = '/' in calculator
+
 if sum == True:
     print(calculator)
-if sub == True:
+elif sub == True:
     print(calculator)
-if multi == True:
+elif multi == True:
     print(calculator)
-if divis == True:
+elif divis == True:
     print(calculator)
