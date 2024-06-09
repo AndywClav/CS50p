@@ -1,4 +1,5 @@
 valueC = input("Expression: ").strip()
 calculator = valueC.replace(" ", "")
-
-print(calculator)
+array = '+' in calculator
+if array == '+':
+    print(calculator)
