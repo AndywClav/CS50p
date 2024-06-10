@@ -1,6 +1,6 @@
 def main():
     time = input("What time is it? ").strip()
-    if time == len(time):
+    if time:
         convert(time)
     else:
         print('There is nothing')
