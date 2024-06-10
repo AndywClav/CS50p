@@ -9,7 +9,7 @@ def main():
 def convert(time):
     hours, minutes = time.split(":")
     point = time.split(".")
-    if float(point) == '.':
+    if point == '.':
         print(point)
     else:
         if int(hours) >= 7 and int(hours) <= 9:
