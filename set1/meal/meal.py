@@ -7,23 +7,25 @@ def main():
 
 
 def convert(time):
-    hours, minutes = time.split(":")
-    point = time.split(".")
-    if point == '.':
-        print(point)
+    if '.' in time:
+        hours, minutes = time.split(".")
+        minutes = int(minutes) * 0.6
     else:
-        if int(hours) >= 7 and int(hours) <= 9:
-                print('breakfast time')
-        else:
-                print('')
+        hours, minutes = time.split(":")
 
+    hours = int(hours)
+    minutes = int(minutes)
 
-    # elif int(hours) >= 12 and int(hours) <= 13:
-    #     print('lunch time')
-    # elif int(hours) >= 18 and int(hours) <= 19:
-    #     print('dinner time')
-    # else:
-    #     print('')
+    decimal_time = hours + minutes / 60
+
+    if 7 <= decimal_time <= 9:
+        print('breakfast time')
+    elif 12 <= decimal_time <= 13:
+        print('lunch time')
+    elif 18 <= decimal_time <= 19:
+        print('dinner time')
+    else:
+        print('')
 
 
 if __name__ == "__main__":
