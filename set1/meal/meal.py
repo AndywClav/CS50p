@@ -18,10 +18,9 @@ def main():
 
 
 def convert(time):
-    # Check if the time contains a decimal point
     if '.' in time:
         hours, minutes = time.split(".")
-        minutes = int(minutes) * 0.6  # Convert decimal minutes to standard minutes
+        minutes = int(minutes) * 0.6 
     else:
         hours, minutes = time.split(":")
 
