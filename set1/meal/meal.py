@@ -3,8 +3,7 @@ def main():
     if time:
         decimal_time = convert(time)
         print(decimal_time)
-
-        # Optional: Print meal time based on decimal time
+        
         if 7 <= decimal_time <= 9:
             print('breakfast time')
         elif 12 <= decimal_time <= 13:
@@ -20,14 +19,13 @@ def main():
 def convert(time):
     if '.' in time:
         hours, minutes = time.split(".")
-        minutes = int(minutes) * 0.6 
+        minutes = int(minutes) * 0.6
     else:
         hours, minutes = time.split(":")
 
     hours = int(hours)
     minutes = int(minutes)
 
-    # Convert the time to a decimal representation
     decimal_time = hours + minutes / 60
 
     return decimal_time
