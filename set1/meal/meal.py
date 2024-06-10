@@ -2,8 +2,7 @@ def main():
     time = input("What time is it? ").strip()
     if time:
         decimal_time = convert(time)
-        print(decimal_time)
-        
+
         if 7 <= decimal_time <= 9:
             print('breakfast time')
         elif 12 <= decimal_time <= 13:
