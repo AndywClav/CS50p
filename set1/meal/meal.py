@@ -5,7 +5,11 @@ def main():
 
 def convert(time):
     hours, minutes = time.split(":")
-    print('breakfast time') if int(hours) >= 8 or int(hours) <= 9 else print('')
+
+    if int(hours) >= 8 or int(hours) <= 9:
+        print('breakfast time')
+    else:
+        print('')
 
 
 if __name__ == "__main__":
