@@ -8,6 +8,10 @@ def convert(time):
 
     if int(hours) >= 8 and int(hours) <= 9:
         print('breakfast time')
+    elif int(hours) >= 12 and int(hours) <= 13:
+        print('lunch time')
+    elif int(hours) >= 18 and int(hours) <= 19:
+        print('dinner time')
     else:
         print('')
 
