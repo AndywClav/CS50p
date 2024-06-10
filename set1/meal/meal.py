@@ -1,9 +1,9 @@
 def main():
     time = input("What time is it? ").strip()
-    if time == time.leght:
-        print('There is nothing')
-    else:
+    if time == len(time):
         convert(time)
+    else:
+        print('There is nothing')
 
 
 def convert(time):
