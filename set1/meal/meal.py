@@ -1,7 +1,7 @@
 def main():
     time = input("What time is it? ").strip()
-    if time.split(".") == ".":
-        print('time')
+    if time == '':
+        print('There is nothing')
     else:
         convert(time)
 
