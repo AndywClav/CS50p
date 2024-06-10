@@ -1,6 +1,9 @@
 def main():
     time = input("What time is it? ").strip()
-    convert(time)
+    if time.split(".") == ".":
+        print('time')
+    else:
+        convert(time)
 
 
 def convert(time):
