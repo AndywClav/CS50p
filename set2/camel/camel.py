@@ -1,3 +1,19 @@
-camel_case = input('camelCase: ').strip()
-print(camel_case)
-print(f'snake_case: {camel_case}')
+def transformation():
+    camelCase = input('camelCase: ').strip()
+    for i in camelCase:
+
+
+def validation():
+    transformation()
+    if i == i.upper():
+        print(f'snake_case: {camelCase}')
+    elif: i == i:
+        print(f'snake_case: {camelCase}')
+
+
+def main():
+    validation()
+
+
+if __ == "__main__":
+    main()
