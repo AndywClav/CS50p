@@ -8,6 +8,6 @@ while coca_cola > 0:
         change_own = coca_cola - insert
         coca_cola = change_own
 
-    print(f'Amount Due: { change_own }')
+    print(f'Amount Due: { coca_cola }')
 
 print(f'Change Owed: { change_own }')
