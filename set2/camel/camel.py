@@ -1,7 +1,14 @@
 camelCase = input('camelCase: ').strip()
-upper = camelCase.upper() in camelCase
-print(f'{camelCase} \n {upper}')
+snake_case = ""
 
-    # conv1, conv2 = out.split('')
-    # print(f'snake_case: {camelCase}')
+for char in camelCase:
+    if char.isupper():
+        snake_case += "_" + char.lower()
+    else:
+        snake_case += char
 
+# Asegurarse de que la cadena no comience con un guion bajo
+if snake_case.startswith('_'):
+    snake_case = snake_case[1:]
+
+print(f'snake_case: {snake_case}')
