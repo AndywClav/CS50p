@@ -5,4 +5,4 @@ posible_value = [25, 10, 5]
 if insert in posible_value:
     print()
 
-print()
+print(f'Amount Due: { coca_cola }')
