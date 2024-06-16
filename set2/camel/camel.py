@@ -1,7 +1,8 @@
 camelCase = input('camelCase: ').strip()
-for i in camelCase:
-    if i == i.upper():
-        print(f'snake_case: {camelCase}')
-    elif i == i:
-        print(f'snake_case: {camelCase}')
+out = camelCase.title() in camelCase
+
+if out == out:
+    print(f'snake_case: {camelCase}')
+elif out != out:
+    print(f'snake_case: {camelCase}')
 
