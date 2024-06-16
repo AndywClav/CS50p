@@ -1,7 +1,7 @@
 camelCase = input('camelCase: ').strip()
-out = camelCase.title() in camelCase
+upper = camelCase.upper() in camelCase
+print(f'{camelCase} \n {upper}')
 
-if out == out:
-    conv1, conv2 = out.split('')
-    print(f'snake_case: {camelCase}')
+    # conv1, conv2 = out.split('')
+    # print(f'snake_case: {camelCase}')
 
