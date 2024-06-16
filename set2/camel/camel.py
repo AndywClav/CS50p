@@ -1,6 +1,6 @@
 camelCase = input('camelCase: ').strip()
-out = i in camelCase.title()
-print(out)
+for i in camelCase:
+    print(i)
 
 # if i == i.upper():
 #     print(f'snake_case: {camelCase}')
