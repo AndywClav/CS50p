@@ -1,4 +1,8 @@
 twttr = input("Input: ").strip()
-vowels = ['']
+vowels = ['a', 'e', 'i', 'o', 'u',]
 
-for char
+for char in twttr:
+    if char == vowels:
+        print("vowels")
+    else:
+        print("UnVowels")
