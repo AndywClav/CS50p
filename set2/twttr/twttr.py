@@ -1,1 +1,2 @@
-twttr = input("Input: ").
+twttr = input("Input: ").strip()
+
