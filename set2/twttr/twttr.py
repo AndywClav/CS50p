@@ -7,7 +7,8 @@ for char in twttr:
         out = char
         print(out)
     else:
-        out = char
-        
+        out += char
 
 
+
+print(out)
