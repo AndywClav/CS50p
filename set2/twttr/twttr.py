@@ -4,7 +4,8 @@ out = ""
 
 for char in twttr:
     if char in vowels:
-        out = vowels.replace(char, "") 
+        print(out)
+        out = twttr.replace(vowels, "") + char
+        print(out)
 
 
-print("out")
