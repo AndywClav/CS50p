@@ -8,7 +8,7 @@ def main():
 
 def is_valid(s):
     if s.isupper():
-        if s[0] != '0':
+        if s[0:2]:
             return True
 
 
