@@ -9,7 +9,8 @@ def main():
 def is_valid(s):
     if s.isupper():
         if len(s) >= 2 and len(s) <= 6:
-            return True
+            if s[0:2] != '0':
+                return True
 
 
 main()
