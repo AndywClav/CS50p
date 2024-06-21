@@ -4,8 +4,7 @@ out = ""
 
 for char in twttr:
     if char in vowels:
-        out += char.remove(vowels, "")
-        print(out)
+        continue
     else:
         out += char
 
