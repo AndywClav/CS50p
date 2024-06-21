@@ -11,7 +11,6 @@ def is_valid(s):
     if s.isupper():
         if len(s) >= 2 and len(s) <= 6:
             for char in s:
-                if char not in no_valid:
                     return True
 
 
