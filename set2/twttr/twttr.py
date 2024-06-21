@@ -1,11 +1,9 @@
-twttr = input("Input: ").lower().strip()
-vowels = ['a', 'e', 'i', 'o', 'u']
+twttr = input("Input: ").strip()
+vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
 out = ""
 
 for char in twttr:
-    if char in vowels:
-        continue
-    else:
+    if char not in vowels:
         out += char
 
 
