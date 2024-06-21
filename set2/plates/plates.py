@@ -8,8 +8,8 @@ def main():
 
 def is_valid(s):
     if s.isupper():
-        if s.
-        return True
+        if s.startswith() != '0':
+            return True
 
 
 main()
