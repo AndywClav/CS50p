@@ -8,9 +8,7 @@ def main():
 
 def is_valid(s):
     if s.isupper():
-        for char in s:
-            while char < 6:
-                return True
+AA        return True
 
 
 main()
