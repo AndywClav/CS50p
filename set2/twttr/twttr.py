@@ -9,5 +9,4 @@ for char in twttr:
         out += char
 
 
-
 print(out)
