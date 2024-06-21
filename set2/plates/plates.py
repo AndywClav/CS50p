@@ -9,7 +9,7 @@ def main():
 def is_valid(s):
     if s.isupper():
         for char in s:
-            if char < 7:
+            if char <= 6:
                 return True
 
 
