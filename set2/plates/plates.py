@@ -7,7 +7,6 @@ def main():
 
 
 def is_valid(s):
-    char = s.upper()
-
+    
 
 main()
