@@ -1,4 +1,4 @@
-twttr = input("Input: ").strip()
+twttr = input("Input: ").lower().strip()
 vowels = ['a', 'e', 'i', 'o', 'u',]
 out = ""
 
