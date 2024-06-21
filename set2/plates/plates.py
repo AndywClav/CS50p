@@ -7,6 +7,8 @@ def main():
 
 
 def is_valid(s):
-    
+    if s.isupper():
+        return True
 
+        
 main()
