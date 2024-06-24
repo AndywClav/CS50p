@@ -3,4 +3,5 @@ food = [{ 'Apple': 130 },
         { 'Sweet Cherries': 100 }]
 
 for item in food:
-    print(item)
+    for key, value in item.items():
+        print(key, value)
