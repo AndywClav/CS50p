@@ -1,6 +1,8 @@
 food = [{'Apple': 130},
         {'Avocado': 50},
-        {'Sweet Cherries': 100}]
+        {'Sweet Cherries': 100},
+        {'Kiwifruit': 90},
+        {'Pear': 100}]
 
 
 def food_validation(ask):
@@ -17,6 +19,6 @@ def main():
     if calories is not None:
         print(f"Calories: { calories }")
     else:
-        print('Error')
+        print('')
 
 main()
