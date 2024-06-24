@@ -5,6 +5,7 @@ def main():
     else:
         print("Invalid")
 
+
 def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
@@ -15,13 +16,17 @@ def is_valid(s):
     if not s.isalnum():
         return False
 
-    found_number = False
+    has_number = False
     for i in range(len(s)):
         if s[i].isdigit():
-            found_number = True
-            if not s[i:].isdigit() or (i > 0 and s[i] == '0' and not s[i - 1].isalpha()):
+            if not s[i:].isdigit():
                 return False
+            has_number = True
+            if s[i] == '0':
+                return False
+            break
 
     return True
+
 
 main()
