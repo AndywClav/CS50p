@@ -2,11 +2,20 @@ food = [{ 'Apple': 130 },
         { 'Avocado': 50 },
         { 'Sweet Cherries': 100 }]
 
-for item in food:
-    for key, value in item.items():
-        print(key, value)
+
+def food_validation(ask):
+    for item in food:
+        for key, value in item.items():
+            if ask == key:
+                return value
+
 
 def main():
     ask = input("Item: ").title().strip()
-    if food(ask):
+    if food_validation(ask):
         print(f"Calories: { value }")
+    else:
+        print('Error')
+
+
+main()
