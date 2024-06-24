@@ -5,3 +5,6 @@ food = [{ 'Apple': 130 },
 for item in food:
     for key, value in item.items():
         print(key, value)
+
+def main():
+    
