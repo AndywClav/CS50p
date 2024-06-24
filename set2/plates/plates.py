@@ -9,7 +9,7 @@ def main():
 def is_valid(s):
     if s.isupper():
         if len(s) >= 2 and len(s) <= 6:
-            if '.' not in s:
+            if '.' not in s and s[2] != '0':
                 return True
 
 
