@@ -7,4 +7,6 @@ for item in food:
         print(key, value)
 
 def main():
-    
+    ask = input("Item: ").title().strip()
+    if food(ask):
+        print(f"Calories: { value }")
