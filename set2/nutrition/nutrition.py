@@ -1,6 +1,6 @@
-food = [{ 'Apple': 130 },
-        { 'Avocado': 50 },
-        { 'Sweet Cherries': 100 }]
+food = [{'Apple': 130},
+        {'Avocado': 50},
+        {'Sweet Cherries': 100}]
 
 
 def food_validation(ask):
@@ -8,14 +8,15 @@ def food_validation(ask):
         for key, value in item.items():
             if ask == key:
                 return value
+    return None
 
 
 def main():
     ask = input("Item: ").title().strip()
-    if food_validation(ask):
-        print(f"Calories: { value }")
+    calories = food_validation(ask)
+    if calories is not None:
+        print(f"Calories: { calories }")
     else:
         print('Error')
-
 
 main()
