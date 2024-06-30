@@ -17,7 +17,9 @@ def main():
     fraction = validation()
     percentage = round(fraction * 100)
     match percentage:
-        case 0 or 1:
+        case 0:
+            print('E')
+        case 1:
             print('E')
         case 25:
             print('25%')
@@ -25,7 +27,9 @@ def main():
             print('50%')
         case 75:
             print('75%')
-        case 100 or 99:
+        case 99:
+            print('F')
+        case 100:
             print('F')
 
 
