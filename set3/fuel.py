@@ -4,7 +4,6 @@ while True:
         x, y = fraction.split("/")
         x = int(x)
         y = int(y)
-        if 
-        print(f'{x}:{y}')
+        break
     except ValueError:
         print(f'ValueError')
