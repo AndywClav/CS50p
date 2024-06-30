@@ -23,7 +23,7 @@ def main():
             print('50%')
         case .75:
             print('75%')
-        case 1:
+        case 1 or .99:
             print('F')
 
 
