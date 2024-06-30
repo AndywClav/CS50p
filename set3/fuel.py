@@ -1,3 +1,5 @@
-x = input("Fraction: ").strip()
+while True:
+    x = input("Fraction: ").strip()
+    if x
 
 print(x)
