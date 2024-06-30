@@ -13,7 +13,7 @@ def validation():
             print(f'ZeroDivisionError')
 def main():
     fraction = validation()
-    print(fraction)
+    # print(fraction)
     match fraction:
         case 0:
             print('E')
