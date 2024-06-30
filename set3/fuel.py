@@ -7,3 +7,5 @@ while True:
         break
     except ValueError:
         print(f'ValueError')
+    except ZeroDivisionError:
+        print(f'ZeroDivisionError')
