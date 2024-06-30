@@ -1,1 +1,2 @@
-x = input("Fraction: ")
+x = input("Fraction: ").strip()
+print(x)
