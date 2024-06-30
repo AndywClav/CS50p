@@ -15,7 +15,7 @@ def main():
     fraction = validation()
     print(fraction)
     match fraction:
-        case 0 or :
+        case 0 or 0.0:
             print('E')
         case .25:
             print('25%')
