@@ -23,8 +23,12 @@ def main():
             print('E')
         case 25:
             print('25%')
+        case 33:
+            print('33%')
         case 50:
             print('50%')
+        case 67:
+            print('67%')
         case 75:
             print('75%')
         case 99:
