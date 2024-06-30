@@ -4,4 +4,4 @@ while True:
         x, y = fraction.split("/")
         print(f'{x}:{y}')
     except ValueError:
-        print(f'{x}:{y}')
+        print(f'Error {x}:{y}')
