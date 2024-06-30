@@ -1,5 +1,6 @@
-
-fraction = input("Fraction: ").strip()
-fraction.replace("/", "")
-num in fraction
-print(num[0], num[1])
+while True:
+    fraction = input("Fraction: ").strip()
+    x, y = fraction.split("/")
+    if int(x) == True and int(y) == True:
+        print(type(x), type(y))
+        continue
