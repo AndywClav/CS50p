@@ -1,6 +1,6 @@
 while True:
     try:
-        fraction = input("Fraction: ").strip()
+        fraction = int(input("Fraction: ")).strip()
         x, y = fraction.split("/")
         print(f'{x}:{y}')
     except ValueError:
