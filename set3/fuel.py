@@ -1,8 +1,8 @@
 while True:
     try:
-        fraction = int(input("Fraction: ")).strip()
+        fraction = input("Fraction: ").strip()
         x, y = fraction.split("/")
-        if x == int and y == int:
+        if int(x) == True and int(y) == True:
             print(f'{x}:{y}')
     except ValueError:
         print(f'ValueError')
