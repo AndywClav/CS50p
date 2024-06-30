@@ -5,6 +5,8 @@ def validation():
             x, y = fraction.split("/")
             x = int(x)
             y = int(y)
+            if x > y or y == 0:
+                continue
             resul = x / y
             return resul
         except ValueError:
