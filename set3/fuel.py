@@ -11,5 +11,6 @@ def validation():
             print(f'ValueError')
         except ZeroDivisionError:
             print(f'ZeroDivisionError')
-
-validation()
+def main():
+    fraction = validation()
+    
