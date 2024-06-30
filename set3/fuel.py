@@ -5,8 +5,7 @@ while True:
         x = int(x)
         y = int(y)
         resul = x / y
-        return result
-        breal
+        return resul
     except ValueError:
         print(f'ValueError')
     except ZeroDivisionError:
