@@ -3,6 +3,9 @@ while True:
     items = {}
     contador = 0
     if item == True:
-        items = item
+        items = item # insert
+        if items.get(item) == item:
+            contador += 1
+
 
 print(items)
