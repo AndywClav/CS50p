@@ -2,6 +2,6 @@ items = {}
 item = input("").strip().lower()
 items["Grocery"] = item
 
-print(items[0])
+print(items.keys())
 
 
