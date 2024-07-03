@@ -14,8 +14,8 @@ def validation(prompt):
     while True:
         try:
             product = input(prompt).title()
-            if key in product:
-                print(f'Total: ${product[key]:.2f}')
+            if foods:
+                print(f'Total: ${foods[product]:.2f}')
                 pass
         except ValueError:
             break
