@@ -1,7 +1,7 @@
 items = {}
 item = input("").strip().lower()
-items[item]
+items["Grocery"] = item
 
-print(items)
+print(items["Grocery"])
 
 
