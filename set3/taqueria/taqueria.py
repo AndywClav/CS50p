@@ -1,13 +1,14 @@
 foods = {
-    "Baja Taco": 4.25,
+    "Baja Taco": 21.25,
     "Burrito": 27.00,
     "Bowl": 27.00,
     "Nachos": 27.00,
-    "Quesadilla": 8.50,
-    "Super Burrito": 8.50,
+    "Quesadilla": 21.25,
+    "Super Burrito": 21.25,
     "Super Quesadilla": 9.50,
     "Taco": 6.00,
-    "Tortilla Salad": 14.00
+    "Tortilla Salad": 14.00,
+    "Burger": 0.00
 }
 
 def validation(prompt):
