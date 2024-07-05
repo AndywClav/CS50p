@@ -1,14 +1,16 @@
-
 def items():
     items = {}
     try:
         while True:
-            item = input("").strip().lower()
-            items[item] = 0
+            item = input().strip().lower()
             if item in items:
                 items[item] += 1
-                print(f"{items[item]} {items.keys()}")
+            else:
+                items[item] = 1
+            print(f"{items[item]} {item}")
     except:
-        return print(items)
+        pass
+    finally:
+        print(items)
 
 items()
