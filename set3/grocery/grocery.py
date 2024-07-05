@@ -11,5 +11,6 @@ def items():
         pass
     finally:
         print(f"{items[item]} {item}")
+        print(items)
 
 items()
