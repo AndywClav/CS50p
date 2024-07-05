@@ -1,5 +1,6 @@
 items = {}
 item = input("").strip().lower()
-items.add(item)
+contador = 0
+items[item] = contador
 
 print(items)
