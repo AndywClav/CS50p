@@ -10,7 +10,7 @@ def items():
                 contador += 1
                 items.update({ item: contador })
                 print(f"{items[item]} {items.keys()}")
-    except KeyboardInterrupt:
+    except:
         return print(items)
 
 items()
