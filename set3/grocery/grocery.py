@@ -7,10 +7,9 @@ def items():
                 items[item] += 1
             else:
                 items[item] = 1
-            print(f"{items[item]} {item}")
     except:
         pass
     finally:
-        print(items)
+        print(f"{items[item]} {item}")
 
 items()
