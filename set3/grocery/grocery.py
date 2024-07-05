@@ -4,11 +4,9 @@ def items():
     try:
         while True:
             item = input("").strip().lower()
-            contador = 0
-            items[item] = contador
+            items[item] = 0
             if item in items:
-                contador += 1
-                items.update({ item: contador })
+                items[item] += 1
                 print(f"{items[item]} {items.keys()}")
     except:
         return print(items)
