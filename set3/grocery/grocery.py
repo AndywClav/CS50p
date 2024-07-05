@@ -8,8 +8,8 @@ def items():
             items[item] = contador
             if item in items:
                 items[item] = contador + 1
+                print(f"{items[item]} {items.keys()}")
     except KeyboardInterrupt:
-        return print(f"{items[item]} {items.keys()}")
-
+        return 0
 
 items()
