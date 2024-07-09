@@ -11,7 +11,7 @@ def items():
         pass
     finally:
         for item in items:
-            print(f"{items[item]} {item}")
+            print(f"{items[item]} {item.upper()}")
 
 items()
 
