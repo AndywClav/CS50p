@@ -10,10 +10,8 @@ def items():
     except:
         pass
     finally:
-        for i in items:
+        for item in items:
             print(f"{items[item]} {item}")
-
-    print( items)
 
 items()
 
