@@ -12,7 +12,7 @@ def items():
     finally:
         for i in items:
             print(f"{items[item]} {item}")
-            print(items[i])
+            
 
 items()
 
