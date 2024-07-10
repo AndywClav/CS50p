@@ -7,11 +7,10 @@ def items():
                 items[item] += 1
             else:
                 items[item] = 1
-    except:
+    except EOFError:
         pass
     finally:
-        for item in items:
+        for item in sorted(items):
             print(f"{items[item]} {item.upper()}")
 
 items()
-
