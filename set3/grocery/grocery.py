@@ -9,6 +9,9 @@ def items():
                 items[item] = 1
     except EOFError:
         pass
+    except KeyboardInterrupt:
+        print("")
+        pass
     finally:
         for item in sorted(items):
             print(f"{items[item]} {item.upper()}")
