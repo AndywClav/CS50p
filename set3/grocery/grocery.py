@@ -16,4 +16,8 @@ def items():
         for item in sorted(items):
             print(f"{items[item]} {item.upper()}")
 
-items()
+def main():
+    items()
+
+if __name__ == "__main__":
+    main()
