@@ -13,11 +13,6 @@ mouths = [
     "December"
 ]
 
-try:
-    date = input().strip().title()
-    if date in mouths:
-        print()
-except:
-    pass
-else:
-    print("SI")
+
+date = input().strip().title()
+
