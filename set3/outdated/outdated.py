@@ -17,3 +17,7 @@ mouths = [
 date = input().strip().title()
 convert_slash = date.split("/")
 convert_space = date.split(" ")
+if convert_slash:
+    print(f"{date} with slash")
+elif convert_space:
+    print(f"{date} with space")
