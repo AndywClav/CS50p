@@ -15,4 +15,6 @@ mouths = [
 
 
 date = input().strip().title()
+convert = date.split("/")
 
+if 
