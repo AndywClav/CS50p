@@ -16,7 +16,6 @@ mouths = [
 while True:
     try:
         date = input().strip().title()
-        start_mouth = date.startswith(mouths)
         if "/" in date:
             day, mouth, year = date.split("/")
             print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
