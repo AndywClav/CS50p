@@ -17,6 +17,6 @@ date = input().strip().title()
 
 if "/" in date:
     day, mouth, year = date.split("/")
-    print(f"{:02dint(year)}-{int(mouth):02d}-{int(day):02d}")
+    print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
 elif " " in date:
     day, mouth, year = date.split(" ")
