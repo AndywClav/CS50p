@@ -16,6 +16,6 @@ mouths = [
 date = input().strip().title()
 
 if "/" in date:
-    print(f"{date} with slash")
+    day, mouth, year = date.split("/")
 elif " " in date:
-    print(f"{date} with space")
+    day, mouth, year = date.split("/")
