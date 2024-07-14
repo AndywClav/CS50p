@@ -19,4 +19,5 @@ if "/" in date:
     day, mouth, year = date.split("/")
     print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
 elif " " in date:
-    day, mouth, year = date.split(" ")
+    if date in mouths:
+        day, mouth, year = date.split(" ")
