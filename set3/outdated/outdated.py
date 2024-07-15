@@ -17,9 +17,9 @@ while True:
     try:
         date = input("Dates: ").title()
         if "/" in date:
-            day, mouth, year = date.split("/")
+            mouth, day, year = date.split("/")
             if day <= 31 or mouth <= 12:
-                print(f"{int(year)}-{int(day):02d}-{int(mouth):02d}")
+                print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
                 break
         elif " " in date:
                 mouth, day, year = date.split(" ")
