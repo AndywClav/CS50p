@@ -15,7 +15,7 @@ mouths = [
 
 while True:
     try:
-        date = input().strip().title()
+        date = input("Dates: ").strip().title()
         if "/" in date:
             day, mouth, year = date.split("/")
             print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
