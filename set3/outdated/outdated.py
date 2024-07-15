@@ -21,6 +21,7 @@ while True:
             print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
             break
         elif " " in date:
+                if 
                 mouth, day, year = date.split(" ")
                 print(mouth)
     except:
