@@ -23,6 +23,7 @@ while True:
         elif " " in date:
                 mouth, day, year = date.split(" ")
                 if date.startswith(mouth) and mouth in mouths:
-                    print(mouth)
+                    print(f"{int(year)}-{(mouth)}-{int(day):02d}")
+                    break
     except:
         break
