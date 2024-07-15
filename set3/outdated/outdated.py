@@ -22,7 +22,7 @@ while True:
             break
         elif " " in date:
                 mouth, day, year = date.split(" ")
-                if date.startswith(mouth):
+                if date.startswith(mouth) and mouth in mouths:
                     print(mouth)
     except:
         break
