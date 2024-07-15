@@ -23,7 +23,7 @@ while True:
         elif " " in date:
                 mouth, day, year = date.split(" ")
                 if date.startswith(mouth) and mouth in mouths:
-                    match date.startswith(mouth):
+                    match date:
                          case "January":
                               print(f"{int(year)}-01-{int(day):02d}")
                          case "February":
@@ -48,6 +48,7 @@ while True:
                               print(f"{int(year)}-11-{int(day):02d}")
                          case "December":
                               print(f"{int(year)}-12-{int(day):02d}")
+                    print("aca")
                     break
     except:
         break
