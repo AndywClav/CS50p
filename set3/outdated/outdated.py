@@ -23,8 +23,20 @@ while True:
         elif " " in date:
                 mouth, day, year = date.split(" ")
                 if date.startswith(mouth) and mouth in mouths:
-                    if day <= 31 or mouth <= 12:
-                        print(f"{int(year)}-{(mouth)}-{int(day):02d}")
-                        break
+                    match mouth:
+                         case "January":
+                         case "February":
+                         case "March",
+                         case "April",
+                         case "May",
+                         case "June",
+                         case "July",
+                         case "August",
+                         case "September",
+                         case "October",
+                         case "November",
+                         case "December"
+                    print(f"{int(year)}-{(mouth)}-{int(day):02d}")
+                    break
     except:
         break
