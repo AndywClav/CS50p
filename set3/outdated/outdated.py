@@ -1,4 +1,4 @@
-mouths = [
+months = [
     "January",
     "February",
     "March",
@@ -15,40 +15,33 @@ mouths = [
 
 while True:
     try:
-        date = input("Dates: ").title()
+        date = input("Dates: ").strip().title()
         if "/" in date:
-            mouth, day, year = date.split("/")
-            print(f"{int(year)}-{int(mouth):02d}-{int(day):02d}")
-            break
-        elif " " in date:
-                mouth, day, year = date.split(" ")
-                if date.startswith(mouth) and mouth in mouths:
-                    match date:
-                         case "January":
-                              print(f"{int(year)}-01-{int(day):02d}")
-                         case "February":
-                              print(f"{int(year)}-02-{int(day):02d}")
-                         case "March":
-                              print(f"{int(year)}-03-{int(day):02d}")
-                         case "April":
-                              print(f"{int(year)}-04-{int(day):02d}")
-                         case "May":
-                              print(f"{int(year)}-05-{int(day):02d}")
-                         case "June":
-                              print(f"{int(year)}-06-{int(day):02d}")
-                         case "July":
-                              print(f"{int(year)}-07-{int(day):02d}")
-                         case "August":
-                              print(f"{int(year)}-08-{int(day):02d}")
-                         case "September":
-                              print(f"{int(year)}-09-{int(day):02d}")
-                         case "October":
-                              print(f"{int(year)}-10-{int(day):02d}")
-                         case "November":
-                              print(f"{int(year)}-11-{int(day):02d}")
-                         case "December":
-                              print(f"{int(year)}-12-{int(day):02d}")
-                    print("aca")
+            parts = date.split("/")
+            if len(parts) == 3:
+                month, day, year = parts
+                day = day.replace(",", "").strip()
+                if day.isdigit() and month.isdigit() and year.isdigit() and int(day) <= 31 and 1 <= int(month) <= 12:
+                    print(f"{int(year)}-{int(month):02d}-{int(day):02d}")
                     break
-    except:
-        break
+                else:
+                    print("Invalid date format, please try again.")
+            else:
+                print("Invalid date format, please try again.")
+        elif "," in date:
+            parts = date.split(" ")
+            if len(parts) == 3:
+                month, day, year = parts
+                day = day.replace(",", "").strip()
+                if month in months and day.isdigit() and year.isdigit() and int(day) <= 31:
+                    month_index = months.index(month) + 1
+                    print(f"{int(year)}-{month_index:02d}-{int(day):02d}")
+                    break
+                else:
+                    print("Invalid date format, please try again.")
+            else:
+                print("Invalid date format, please try again.")
+        else:
+            print("Invalid date format, please try again.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
