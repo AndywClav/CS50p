@@ -2,7 +2,7 @@ import emoji
 
 def get_emoji(msg):
     """
-    This is an Fuction for print Emoji
+    This is an Fuction for print Emoji and do validation XD
     """
     try:
         print(emoji.emojize(msg, language='alias'))
