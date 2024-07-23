@@ -8,8 +8,6 @@ def inp():
     if ":" in message:
         emj = message.split(":")
         emoji = emoji(emj)
+        print(f"Output {message}{emoji}")
 
-
-
-
-print(f"Output {message}")
+inp()
