@@ -1,10 +1,10 @@
 import emoji
 
-message = input("Input: ")
-if ":" in message:
-    #messa, icon = message.split(" ")
-    #print(icon)
-    icon = emoji.emojize(message)
-    print(f"Hola {icon}")
+messages = input("Input: ")
+if ":" in messages:
+    part1, part2 = messages.split(" ")
+    part2 = part2.strip()hello, :earth_africa:
+    icon = emoji.emojize(part2)
+    print(f"{part1} {icon}")
 else:
-    print(message)
+    print(messages)
