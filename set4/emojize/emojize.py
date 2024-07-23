@@ -7,8 +7,8 @@ def inp():
     message = input("Input: ")
     if ":" in message:
         emj = message.split(":")
-        emoji = emoji(emj)
-        print(f"Output {emoji}")
+        emoj = emoji(emj)
+        print(f"Output {emoj:thumbsup:}")
     else:
         print(message)
 
