@@ -1,5 +1,5 @@
 import emoji
 
-mesagge = input("Input: ")
+message = input("Input: ")
 
 print(f"Output {message}")
