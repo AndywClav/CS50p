@@ -1,13 +1,13 @@
 import emoji
 
 def emoji(emj):
-    emoji.emojize(emj)
+    return emoji.emojize(emj)
 
 def inp():
     message = input("Input: ")
     if ":" in message:
         emj = message.split(":")
-        emoji(emj)
+        emoji = emoji(emj)
 
 
 
