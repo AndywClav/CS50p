@@ -1,3 +1,8 @@
 import emoji
 
-print(emoji.emojize('Python is :thumbs_up:'))
+message = input("Input: ")
+if ":" in message:
+    messa, icon = message.split(":")
+    print(emoji.emojize(messa, icon))
+else:
+    print(message)
