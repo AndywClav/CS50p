@@ -1,6 +1,6 @@
 import emoji
 
-def f_emoji():
+def get_emoji():
     """
     This is an Fuction for print Emoji
     """
@@ -12,7 +12,7 @@ def f_emoji():
 
 
 def main():
-    f_emoji()
+    get_emoji()
 
 
 if __name__ == "__main__":
