@@ -2,7 +2,7 @@ import emoji
 
 messages = input("Input: ")
 
-if "," in message:
+if "," in messages:
     part1, part2 = messages.split(" ")
     part2 = part2.strip()
     icon = emoji.emojize(part2)
