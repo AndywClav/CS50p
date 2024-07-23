@@ -3,7 +3,7 @@ import emoji
 messages = input("Input: ")
 count = 0
 for message in messages:
-    if ":" in messages:
+    if ":" in message:
         count += count
         match count:
             case 2:
@@ -16,3 +16,5 @@ for message in messages:
                     print(emoji.emojize(messages))
     else:
         print(messages)
+
+print(count)
