@@ -4,9 +4,7 @@ import sys
 if len(sys.argv):
     for arg in sys.argv:
         if arg == "-f" or arg == "--font":
-            for i in sys.argv:
-            #f = Figlet(sys.argv[3])
-            print(i)
+            f = Figlet(sys.argv[2])
         else:
             f = Figlet()
 
