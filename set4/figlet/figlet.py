@@ -1,7 +1,7 @@
 from pyfiglet import Figlet
 import sys
 
-in
+message = input("Input: ")
 
-f = Figlet()
-print(f.renderText('Andres'))
+f = Figlet(font='slant')
+print(f.renderText(message))
