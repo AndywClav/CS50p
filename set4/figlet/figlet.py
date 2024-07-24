@@ -6,13 +6,18 @@ def font_text():
         if len(sys.argv):
             for arg in sys.argv:
                 if arg == "-f" or arg == "--font":
-                    return f = Figlet(sys.argv[2])
+                    f = Figlet(sys.argv[2])
                 else:
-                    return f = Figlet()
+                    f = Figlet()
     except:
         print(f = pyfiglet.figlet_format("ERROR", font="doh"))
 
+
 def main():
-    font_text()
+    f = font_text()
     message = input("Input: ")
     print(f.renderText(message))
+
+
+if __name__ == "__main__":
+    main()
