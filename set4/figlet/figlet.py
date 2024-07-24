@@ -2,11 +2,12 @@ from pyfiglet import Figlet
 import sys
 
 if len(sys.argv):
-    for x in sys.argv:
-        if x == "-f" or x == "--font":
-            f = Figlet()
+    for argum in sys.argv:
+        if argum == "-f" or argum == "--font":
+            #f = Figlet(sys.argv[3])
+            print(argum)
         else:
-        f = Figlet()
+            f = Figlet()
 
     message = input("Input: ")
 
