@@ -3,13 +3,15 @@ import sys
 
 def font_text():
     if len(sys.argv) > 1:
-        for i, arg in enumerate(sys.argv):
-            if arg == "-f" or arg == "--font":
-                if i + 1 < len(sys.argv):
-                    return Figlet(font=sys.argv[i + 1])
-                else:
-                    sys.exit(1)
+        if sys.argv[1] == "-f" or sys.argv[1] == "--font":
+            if len(sys.argv) > 2:
+                return Figlet(font=sys.argv[2])
+            else:
+                sys.exit(1)
+        else:
+            sys.exit(1)
     return Figlet()
+
 
 def main():
     try:
