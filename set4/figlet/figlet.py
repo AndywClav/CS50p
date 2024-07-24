@@ -16,8 +16,8 @@ def main():
         message = input("Input: ")
         print(f.renderText(message))
     except:
-        f = pyfiglet.figlet_format("ERROR", font="doh")
-        print(f)
+        f = Figlet(font='doh')
+        print(f.renderText('ERROR'))
 
 
 if __name__ == "__main__":
