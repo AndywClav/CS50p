@@ -10,7 +10,7 @@ def font_text():
                 else:
                     return f = Figlet()
     except:
-        print(f = pyfiglet.figlet_format("ERROR", font="slant"))
+        print(f = pyfiglet.figlet_format("ERROR", font="doh"))
 
 def main():
     font_text()
