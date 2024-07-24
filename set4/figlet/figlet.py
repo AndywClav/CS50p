@@ -7,8 +7,7 @@ def font_text():
             if arg == "-f" or arg == "--font":
                 return Figlet(sys.argv[2])
             else:
-                #return Figlet()
-                sys.exit
+                return Figlet()
 
 
 def main():
