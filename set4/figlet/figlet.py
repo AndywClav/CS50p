@@ -18,6 +18,7 @@ def font_text():
             sys.exit(1)
     return Figlet()
 
+
 def main():
     try:
         f = font_text()
@@ -27,6 +28,7 @@ def main():
         print(f"Error: {e}")
         f = Figlet(font='pawp')
         print(f.renderText('ERROR'))
+
 
 if __name__ == "__main__":
     main()
