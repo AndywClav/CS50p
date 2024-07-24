@@ -5,7 +5,11 @@ def font_text():
     if len(sys.argv) > 1:
         if sys.argv[1] == "-f" or sys.argv[1] == "--font":
             if len(sys.argv) > 2:
-                return Figlet(font=sys.argv[2])
+                try:
+                    return Figlet(font=sys.argv[2])
+                except Exception as e:
+                    print(f"Error: {e}")
+                    sys.exit(1)
             else:
                 print("Error: Font name not provided.")
                 sys.exit(1)
