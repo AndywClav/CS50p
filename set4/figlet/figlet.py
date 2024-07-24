@@ -2,13 +2,14 @@ from pyfiglet import Figlet
 import sys
 
 def font_text():
-    if len(sys.argv):
-        for arg in sys.argv:
+    if len(sys.argv) > 1:
+        for i, arg in enumerate(sys.argv):
             if arg == "-f" or arg == "--font":
-                return Figlet(sys.argv[2])
-            else:
-                sys.exit
-
+                if i + 1 < len(sys.argv):
+                    return Figlet(font=sys.argv[i + 1])
+                else:
+                    sys.exit(1)
+    return Figlet()
 
 def main():
     try:
