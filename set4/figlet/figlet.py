@@ -8,9 +8,10 @@ def font_text():
                 if arg == "-f" or arg == "--font":
                     return Figlet(sys.argv[2])
                 else:
-                    return holaFiglet()
+                    return Figlet()
     except:
-        print(f = pyfiglet.figlet_format("ERROR", font="doh"))
+        f = pyfiglet.figlet_format("ERROR", font="doh")
+        print(f)
 
 
 def main():
