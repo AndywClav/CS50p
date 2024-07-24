@@ -16,7 +16,7 @@ def main():
         message = input("Input: ")
         print(f.renderText(message))
     except:
-        f = Figlet(font='doh')
+        f = Figlet(font='smisome1')
         print(f.renderText('ERROR'))
 
 
