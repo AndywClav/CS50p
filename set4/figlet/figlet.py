@@ -1,2 +1,5 @@
 from pyfiglet import Figlet
-import syv
+import sys
+
+f = Figlet(font='slant')
+print(f.renderText('text to render'))
