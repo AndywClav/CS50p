@@ -4,9 +4,11 @@ import sys
 if len(sys.argv):
     for x in sys.argv:
         if x == "-f" or x == "--font":
-            print("aca")
+            f = Figlet()
+        else:
+        f = Figlet()
+
     message = input("Input: ")
-    f = Figlet()
 
 
 print(f.renderText(message))
