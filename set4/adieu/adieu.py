@@ -5,7 +5,7 @@ names = []
 
 while True:
     message = input("Name: ")
-    if "" in message:
+    if "" == message:
          break
     names.append(message)
 
