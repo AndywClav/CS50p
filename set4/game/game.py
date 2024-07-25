@@ -14,7 +14,7 @@ if integre:
     while True:
         try:
             game = int(input("Guess: "))
-            if game == 5: # Put de var where goint tu random number 
+            if game == 5: # Put the variable where goint tu random number
                 print("Just right! ")
                 break
         except KeyboardInterrupt:
