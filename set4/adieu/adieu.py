@@ -5,9 +5,10 @@ names = []
 
 while True:
     message = input("ok: ")
-    if "" not in message:
+    if "-1" not in message:
         names.append(message)
     else:
         break
 
-print(p.join(names))
+# print(p.join(names))
+print(names)
