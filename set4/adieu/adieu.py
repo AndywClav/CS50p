@@ -4,8 +4,8 @@ p = inflect.engine()
 names = []
 
 while True:
-    message = input("Name:")
-    if "-1" in message:
+    message = input("Name: ")
+    if "" in message:
          break
     names.append(message)
 
