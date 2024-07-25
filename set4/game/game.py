@@ -6,3 +6,4 @@ while True:
         pass
     else:
         print(integre)
+        break 
