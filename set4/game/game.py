@@ -2,7 +2,8 @@
 while True:
     try:
         integre = int(input("Level: "))
-        break
+        if integre > 0:
+            break
     except KeyboardInterrupt:
         break
     except:
