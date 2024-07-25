@@ -9,5 +9,5 @@ while True:
          break
     names.append(message)
 
-if names != 0:
+if names:
     print(f"Adieu, adieu, to {p.join(names)}")
