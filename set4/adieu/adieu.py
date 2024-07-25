@@ -1,8 +1,12 @@
 import inflect
 
-name = []
+names = []
 
 while True:
     message = input("ok: ")
-    names = message
-    print(names)
+    if "-1" not in message:
+        names = message
+    else:
+        break
+
+print(names)
