@@ -5,7 +5,7 @@ while True:
     except KeyboardInterrupt:
         break
     except:
-        break
+        pass
     else:
         print(integre)
         break
