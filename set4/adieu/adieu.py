@@ -1,5 +1,6 @@
 import inflect
 
+p = inflect.engine()
 names = []
 
 while True:
@@ -9,4 +10,4 @@ while True:
     else:
         break
 
-print(names)
+print(p.join(names))
