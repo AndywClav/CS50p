@@ -4,8 +4,8 @@ names = []
 
 while True:
     message = input("ok: ")
-    if "-1" not in message:
-        names = message
+    if "" not in message:
+        names.append(message)
     else:
         break
 
