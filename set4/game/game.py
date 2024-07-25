@@ -2,8 +2,10 @@
 while True:
     try:
         integre = int(input("Level: "))
-    except ValueError:
-        pass
+    except KeyboardInterrupt:
+        break
+    except:
+        break
     else:
         print(integre)
-        break 
+        break
