@@ -4,3 +4,5 @@ while True:
         integre = int(input("Level: "))
     except:
         pass
+    else:
+        print(integre)
