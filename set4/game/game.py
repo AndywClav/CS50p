@@ -1,3 +1,5 @@
+integre = None
+
 while True:
     try:
         integre = int(input("Level: "))
@@ -8,15 +10,15 @@ while True:
         break
     except:
         pass
-
-while True:
-    try:
-        game = int(input("Guess: "))
-        if game == 5:
-            print("Just right! ")
+if integre:
+    while True:
+        try:
+            game = int(input("Guess: "))
+            if game == 5:
+                print("Just right! ")
+                break
+        except KeyboardInterrupt:
+            print("\nProgram exited.")
             break
-    except KeyboardInterrupt:
-        print("\nProgram exited.")
-        break
-    except:
-        pass
+        except:
+            pass
