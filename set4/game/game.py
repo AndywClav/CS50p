@@ -16,15 +16,16 @@ while True:
 
 if integre:
     num_random = random.randrange(0, integre)
-    print(num_random + 1, integre)
+    num_random += 1
+
     while True:
         try:
             game = int(input("Guess: "))
-            if game < 5:
+            if game < num_random:
                 print("Too small!")
-            elif game > 5:
+            elif game > num_random:
                 print("Too large!")
-            elif game == 5: # Put the variable where goint tu random number
+            elif game == num_random:
                 print("Just right!")
                 break
         except KeyboardInterrupt:
