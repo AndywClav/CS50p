@@ -1,33 +1,30 @@
 import random
 
-integre = None
-
 def ask_level():
     while True:
         try:
             integre = int(input("Level: "))
             if integre > 0:
-                break
+                return integre
         except KeyboardInterrupt:
             print("\nProgram exited.")
-            break
+            return None
         except:
             pass
 
 
-def game():
-    ask_level()
+def game(integre):
     if integre:
-        num_random = random.randrange(1, integre)
+        num_random = random.randint(1, integre)
 
         while True:
             try:
-                game = int(input("Guess: "))
-                if game < num_random:
+                guess = int(input("Guess: "))
+                if guess < num_random:
                     print("Too small!")
-                elif game > num_random:
+                elif guess > num_random:
                     print("Too large!")
-                elif game == num_random:
+                elif guess == num_random:
                     print("Just right!")
                     break
             except KeyboardInterrupt:
@@ -36,10 +33,9 @@ def game():
             except:
                 pass
 
-
 def main():
-    game()
-
+    integre = ask_level()
+    game(integre)
 
 if __name__ == "__main__":
     main()
