@@ -33,9 +33,11 @@ def game(integre):
             except:
                 pass
 
+
 def main():
     integre = ask_level()
     game(integre)
+
 
 if __name__ == "__main__":
     main()
