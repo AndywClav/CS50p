@@ -15,8 +15,7 @@ while True:
 
 
 if integre:
-    num_random = random.randrange(0, integre)
-    num_random += 1
+    num_random = random.randrange(1, integre)
 
     while True:
         try:
