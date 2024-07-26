@@ -24,6 +24,6 @@
 #             pass
 import random
 
-num = random.random()
+num = random.randrange(10)
 
 print(num)
