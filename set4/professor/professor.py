@@ -31,6 +31,8 @@ def generate_integer(level):
                         value = num_x_random + num_y_random
                         if value == answer:
                             return
+                        else:
+                            print("EEE")
             except KeyboardInterrupt:
                 print("\nProgram exited.")
                 break
