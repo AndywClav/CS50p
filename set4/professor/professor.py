@@ -29,8 +29,8 @@ def generate_integer(level):
             try:
                 match level:
                     case 1:
-                        num_x_random = random.randint(1, 9)
-                        num_y_random = random.randint(1, 9)
+                        num_x_random = random.randint(0, 9)
+                        num_y_random = random.randint(0, 9)
                         ok = True
                         while ok == True:
                             answer = int(input(f'{num_x_random} + {num_y_random} = '))
