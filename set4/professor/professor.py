@@ -21,18 +21,13 @@ def get_level():
 
 def generate_integer(level):
     if level:
-        num_random = random.randint(1, level)
-
+        num_random = random.randint(1, 10)
         while True:
             try:
-                guess = int(input("Guess: "))
-                if guess < num_random:
-                    print("Too small!")
-                elif guess > num_random:
-                    print("Too large!")
-                elif guess == num_random:
-                    print("Just right!")
-                    break
+                match level:
+                    case 1:
+                    case 2:
+                    case 3:
             except KeyboardInterrupt:
                 print("\nProgram exited.")
                 break
