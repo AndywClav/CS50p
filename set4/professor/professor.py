@@ -49,7 +49,7 @@ def generate_integer(level):
                         num_x_random = random.randint(100, 999)
                         num_y_random = random.randint(100, 999)
             except KeyboardInterrupt:
-                print(f"\n{score}")
+                print(f"\nScore: {score}")
                 print("\nProgram exited.")
                 break
             except:
