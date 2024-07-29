@@ -31,11 +31,12 @@ def generate_integer(level):
                     case 1:
                         num_x_random = random.randint(1, 9)
                         num_y_random = random.randint(1, 9)
-                        while True:
+                        ok = True
+                        while ok == True:
                             answer = int(input(f'{num_x_random} + {num_y_random} = '))
                             value = sum(num_x_random, num_y_random)
                             if value == answer:
-                                break
+                                ok = False
                             else:
                                 print("EEE")
                     case 2:
