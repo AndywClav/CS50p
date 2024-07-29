@@ -3,7 +3,7 @@ import random
 
 def main():
     level = get_level()
-    #generate_integer(level)
+    generate_integer(level)
 
 
 def get_level():
@@ -21,13 +21,16 @@ def get_level():
 
 def generate_integer(level):
     if level:
-        num_random = random.randint(1, 10)
+        num_x_random = random.randint(1, 10)
+        num_y_random = random.randint(1, 10)
         while True:
             try:
                 match level:
                     case 1:
-                    case 2:
-                    case 3:
+                        answer = input(f'{num_x_random} + {num_y_random}: ')
+                        value = num_x_random + num_y_random
+                        if value == answer:
+                            break
             except KeyboardInterrupt:
                 print("\nProgram exited.")
                 break
