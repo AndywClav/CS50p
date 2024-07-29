@@ -77,7 +77,7 @@ def main():
     level = get_level()
     if level is not None:
         score = generate_integer(level)
-        print(f"Final Score: {score}")
+        print(f"Score: {score}")
 
 def get_level():
     while True:
@@ -128,7 +128,6 @@ def generate_integer(level):
 
             score = validation(num_x_random, num_y_random, score)
         except KeyboardInterrupt:
-            print(f"\nScore: {score}")
             print("Program exited.")
             break
         except:
