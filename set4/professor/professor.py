@@ -23,6 +23,21 @@ def sum(x, y):
     return x + y
 
 
+def game(x, y):
+    ok = True
+    while ok:
+        try:
+            answer = int(input(f'{x} + {y} = '))
+            value = sum(x, y)
+            if value == answer:
+                score += 1
+                ok = False
+            else:
+                raise ValueError
+        except ValueError:
+            print("EEE")
+
+
 def generate_integer(level):
     if level:
         score = 0
@@ -32,18 +47,7 @@ def generate_integer(level):
                     case 1:
                         num_x_random = random.randint(0, 9)
                         num_y_random = random.randint(0, 9)
-                        ok = True
-                        while ok:
-                            try:
-                                answer = int(input(f'{num_x_random} + {num_y_random} = '))
-                                value = sum(num_x_random, num_y_random)
-                                if value == answer:
-                                    score += 1
-                                    ok = False
-                                else:
-                                    raise ValueError
-                            except ValueError:
-                                print("EEE")
+                        game(num_x_random, num_y_random)
                     case 2:
                         num_x_random = random.randint(10, 99)
                         num_y_random = random.randint(10, 99)
