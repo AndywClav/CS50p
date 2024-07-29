@@ -50,7 +50,7 @@ def generate_integer(level):
                         num_y_random = random.randint(100, 999)
             except KeyboardInterrupt:
                 print(f"\nScore: {score}")
-                print("\nProgram exited.")
+                print("Program exited.")
                 break
             except:
                 pass
