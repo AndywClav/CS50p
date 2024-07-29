@@ -32,7 +32,7 @@ def generate_integer(level):
                         num_x_random = random.randint(0, 9)
                         num_y_random = random.randint(0, 9)
                         ok = True
-                        while ok == True:
+                        while ok:
                             answer = int(input(f'{num_x_random} + {num_y_random} = '))
                             value = sum(num_x_random, num_y_random)
                             if value == answer:
