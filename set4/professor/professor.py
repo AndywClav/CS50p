@@ -21,18 +21,24 @@ def get_level():
 
 def generate_integer(level):
     if level:
-        num_x_random = random.randint(1, 10)
-        num_y_random = random.randint(1, 10)
         while True:
             try:
                 match level:
                     case 1:
+                        num_x_random = random.randint(1, 9)
+                        num_y_random = random.randint(1, 9)
                         answer = int(input(f'{num_x_random} + {num_y_random} = '))
                         value = num_x_random + num_y_random
                         if value == answer:
                             return
                         else:
                             print("EEE")
+                    case 2:
+                        num_x_random = random.randint(10, 99)
+                        num_y_random = random.randint(10, 99)
+                    case 3:
+                        num_x_random = random.randint(100, 999)
+                        num_y_random = random.randint(100, 999)
             except KeyboardInterrupt:
                 print("\nProgram exited.")
                 break
