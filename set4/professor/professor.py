@@ -23,7 +23,7 @@ def sum(x, y):
     return x + y
 
 
-def (x, y):
+def validation(x, y):
     ok = True
     while ok:
         try:
@@ -36,6 +36,8 @@ def (x, y):
                 raise ValueError
         except ValueError:
             print("EEE")
+        except KeyboardInterrupt:
+            return score
 
 
 def generate_integer(level):
@@ -47,7 +49,7 @@ def generate_integer(level):
                     case 1:
                         num_x_random = random.randint(0, 9)
                         num_y_random = random.randint(0, 9)
-                        game(num_x_random, num_y_random)
+                        result = validation(num_x_random, num_y_random)
                     case 2:
                         num_x_random = random.randint(10, 99)
                         num_y_random = random.randint(10, 99)
@@ -55,6 +57,7 @@ def generate_integer(level):
                         num_x_random = random.randint(100, 999)
                         num_y_random = random.randint(100, 999)
             except KeyboardInterrupt:
+                score = result
                 print(f"\nScore: {score}")
                 print("Program exited.")
                 break
