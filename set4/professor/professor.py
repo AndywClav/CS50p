@@ -37,6 +37,7 @@ def generate_integer(level):
                                 answer = int(input(f'{num_x_random} + {num_y_random} = '))
                                 value = sum(num_x_random, num_y_random)
                                 if value == answer:
+                                    score =+ 1
                                     ok = False
                             except ValueError:
                                 print("EEE")
@@ -47,6 +48,7 @@ def generate_integer(level):
                         num_x_random = random.randint(100, 999)
                         num_y_random = random.randint(100, 999)
             except KeyboardInterrupt:
+                print(f"\n{score}")
                 print("\nProgram exited.")
                 break
             except:
