@@ -23,7 +23,7 @@ def sum(x, y):
     return x + y
 
 
-def game(x, y):
+def (x, y):
     ok = True
     while ok:
         try:
