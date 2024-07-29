@@ -25,6 +25,7 @@ def sum(x, y):
 
 def generate_integer(level):
     if level:
+        score = 0
         while True:
             try:
                 match level:
