@@ -53,9 +53,11 @@ def generate_integer(level):
                     case 2:
                         num_x_random = random.randint(10, 99)
                         num_y_random = random.randint(10, 99)
+                        result = validation(num_x_random, num_y_random)
                     case 3:
                         num_x_random = random.randint(100, 999)
                         num_y_random = random.randint(100, 999)
+                        result = validation(num_x_random, num_y_random)
             except KeyboardInterrupt:
                 score = result
                 print(f"\nScore: {score}")
