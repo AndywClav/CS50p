@@ -40,6 +40,8 @@ def generate_integer(level):
                                 if value == answer:
                                     score += 1
                                     ok = False
+                                else:
+                                    raise ValueError
                             except ValueError:
                                 print("EEE")
                     case 2:
