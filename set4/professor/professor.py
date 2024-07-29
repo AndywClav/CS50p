@@ -10,7 +10,7 @@ def get_level():
     while True:
         try:
             integre = int(input("Level: "))
-            if integre > 0 or integre < 4:
+            if integre > 0 and integre < 4:
                 return integre
         except KeyboardInterrupt:
             print("\nProgram exited.")
