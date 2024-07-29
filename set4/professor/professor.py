@@ -27,10 +27,10 @@ def generate_integer(level):
             try:
                 match level:
                     case 1:
-                        answer = input(f'{num_x_random} + {num_y_random}: ')
+                        answer = input(f'{num_x_random} + {num_y_random} = ')
                         value = num_x_random + num_y_random
                         if value == answer:
-                            break
+                            return
             except KeyboardInterrupt:
                 print("\nProgram exited.")
                 break
