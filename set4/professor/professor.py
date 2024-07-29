@@ -19,6 +19,10 @@ def get_level():
             pass
 
 
+def sum(x, y):
+    return x + y
+
+
 def generate_integer(level):
     if level:
         while True:
@@ -28,7 +32,7 @@ def generate_integer(level):
                         num_x_random = random.randint(1, 9)
                         num_y_random = random.randint(1, 9)
                         answer = int(input(f'{num_x_random} + {num_y_random} = '))
-                        value = num_x_random + num_y_random
+                        value = sum(num_x_random, num_y_random)
                         if value == answer:
                             return
                         else:
