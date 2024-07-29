@@ -109,8 +109,6 @@ def validation(x, y, score):
                 raise ValueError
         except ValueError:
             print("EEE")
-        except KeyboardInterrupt:
-            return score
     return score
 
 
