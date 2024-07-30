@@ -6,6 +6,7 @@ def main():
         score = generate_integer(level)
         print(f"Score: {score}")
 
+
 def get_level():
     while True:
         try:
@@ -24,24 +25,26 @@ def sum_numbers(x, y):
 
 
 def validation(x, y, score):
-    ok = True
-    while ok:
+    attempts = 0
+    while attempts < 3:
         try:
             answer = int(input(f'{x} + {y} = '))
             value = sum_numbers(x, y)
             if value == answer:
                 score += 1
-                ok = False
+                return score
             else:
-                raise ValueError
+                attempts += 1
+                print("EEE")
         except ValueError:
             print("EEE")
+    print(f"The correct answer is {sum_numbers(x, y)}")
     return score
 
 
 def generate_integer(level):
     score = 0
-    while True:
+    for _ in range(10):
         try:
             if level == 1:
                 num_x_random = random.randint(0, 9)
@@ -57,9 +60,8 @@ def generate_integer(level):
         except KeyboardInterrupt:
             print("Program exited.")
             break
-        except:
-            pass
     return score
+
 
 if __name__ == "__main__":
     main()
