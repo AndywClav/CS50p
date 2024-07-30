@@ -58,7 +58,7 @@ def generate_integer(level):
 
             score = validation(num_x_random, num_y_random, score)
         except KeyboardInterrupt:
-            print("Program exited.")
+            print("\nProgram exited.")
             break
     return score
 
