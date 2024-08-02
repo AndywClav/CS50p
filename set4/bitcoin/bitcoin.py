@@ -18,7 +18,7 @@ def value_btc(json_data):
             value_btc = sys.argv[1]
             if value_btc:
                 data = json_data.json()
-                usd = data["bpi"]["USD"]
+                usd = data["bpi"]["USD"]["rate"]
                 print(usd)
                 amount = 00000000000
                 print(f"${amount:,.4f}")
