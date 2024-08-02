@@ -8,7 +8,7 @@ def fetch_data(url):
         if r.status_code == 200:
             return r
     except requests.RequestException:
-        print(f'Error in status code your status is {r.status_code}')
+        return f'Error in status code your status is {r.status_code}'
 
 
 def value_btc(json_data):
@@ -28,8 +28,9 @@ def value_btc(json_data):
 
 
 def main():
-    json_data = fetch_data('https://api.coindesk.com/v1/bpi/currentprice.json')
-    value_btc(json_data)
+    json_data = fetch_data('https://api.coindesk.com/v1/bpi/currentprice.jso')
+    if json_data == 200:
+        value_btc(json_data)
 
 
 if __name__ == "__main__":
