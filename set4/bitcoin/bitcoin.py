@@ -16,8 +16,10 @@ def value_btc(json_data):
     if len(sys.argv) > 1:
         try:
             value_btc = sys.argv[1]
-            if float(value_btc):
-                print(json.dumps(json_data.json(), indent=2)) # You need finished the logic here, is convert the json in value current
+            if value_btc:
+                #print(json.dumps(json_data.json(), indent=2)) # You need finished the logic here, is convert the json in value current
+                usd = json_data.json()
+                print(usd)
                 amount = 00000000000
                 print(f"${amount:,.4f}")
         except:
