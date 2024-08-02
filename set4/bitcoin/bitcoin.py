@@ -19,9 +19,12 @@ def value_btc(json_data):
             if value_btc :
                 data = json_data.json()
                 usd = data["bpi"]["USD"]["rate"]
-                print(usd)
-                amount = 00000000000
-                print(f"${amount:,.4f}")
+
+                # Logic convert amount
+                print(f"USD {usd} is {type(usd)}")
+                amount = 0000
+                print(f"AMOUNT {amount} is {type(amount)}")
+                #print(f"${amount:,.4f}")
         except:
             print("Command-line argument is not a number")
             sys.exit(1)
