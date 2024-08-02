@@ -5,10 +5,11 @@ import sys
 def fetch_data(url):
     try:
         r = requests.get(url)
-        if r.status_code == 200:
-            return r
-    except requests.RequestException:
-        return f'Error in status code your status is {r.status_code}'
+        r.raise_for_status()  # Raises an HTTPError for bad responses
+        return r
+    except requests.RequestException as e:
+        print(f'Error fetching data: {e}')
+        sys.exit(1)
 
 
 def value_btc(json_data):
@@ -28,9 +29,8 @@ def value_btc(json_data):
 
 
 def main():
-    json_data = fetch_data('https://api.coindesk.com/v1/bpi/currentprice.jso')
-    if json_data == 200:
-        value_btc(json_data)
+    json_data = fetch_data('https://api.coindesk.com/v1/bpi/currentprice.json')
+    value_btc(json_data)
 
 
 if __name__ == "__main__":
