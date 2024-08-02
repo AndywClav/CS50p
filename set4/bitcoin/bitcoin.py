@@ -9,6 +9,6 @@ try:
             print(json.dumps(r.json(), indent=2))
         except:
             print("Missing command-line argument")
-            sys.exit(1)
+            #sys.exit(1)
 except requests.RequestException:
     print(f'Error in status code your status is {r.status_code}')
