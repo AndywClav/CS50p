@@ -4,9 +4,9 @@ import sys
 
 try:
     r = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
-    if len(sys.argv) < 1:
-        print(f"Error: {e}")
-        sys.exit(1)
+    if len(sys.argv) > 1:
+        print(f"Missing command-line argument")
+        sys.exit()
     print(json.dumps(r.json(), indent=2))
 except requests.RequestException:
     print(f'Error in status code your status is {r.status_code}')
