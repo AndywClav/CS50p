@@ -16,7 +16,7 @@ def value_btc(json_data):
     if len(sys.argv) > 1:
         try:
             value_btc = sys.argv[1]
-            if value_btc:
+            if value_btc :
                 data = json_data.json()
                 usd = data["bpi"]["USD"]["rate"]
                 print(usd)
