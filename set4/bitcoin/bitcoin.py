@@ -7,7 +7,9 @@ try:
     if r.status_code == 200:
         if len(sys.argv) > 1:
             try:
-                print(json.dumps(r.json(), indent=2))
+                value_btc = sys.argv[2]
+                if float(value_btc):
+                    print(json.dumps(r.json(), indent=2))
             except:
                 print("Command-line argument is not a number")
         else:
