@@ -17,7 +17,6 @@ def value_btc(json_data):
         try:
             value_btc = sys.argv[1]
             if value_btc:
-                #print(json.dumps(json_data.json(), indent=2)) # You need finished the logic here, is convert the json in value current
                 data = json_data.json()
                 usd = data["bpi"]["USD"]
                 print(usd)
