@@ -5,7 +5,7 @@ import sys
 def fetch_data(url):
     try:
         r = requests.get(url)
-        r.raise_for_status()  # Raises an HTTPError for bad responses
+        r.raise_for_status()
         return r
     except requests.RequestException as e:
         print(f'Error fetching data: {e}')
