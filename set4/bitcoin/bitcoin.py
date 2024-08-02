@@ -15,7 +15,8 @@ def value_btc(json_data):
     if len(sys.argv) > 1:
         try:
             value_btc = sys.argv[2]
-            if float(value_btc):
+            value_btc = float(value_btc)
+            if value_btc:
                 print(json.dumps(json_data.json(), indent=2))
         except:
             print("Command-line argument is not a number")
