@@ -12,19 +12,18 @@ def fetch_data(url):
         sys.exit(1)
 
 
-def value_btc(json_data):
+def process_value(json_data):
     if len(sys.argv) > 1:
         try:
             value_btc = sys.argv[1]
-            if value_btc :
-                data = json_data.json()
-                usd = data["bpi"]["USD"]["rate"]
-
-                amount = usd / float(value_btc)
-                print(f"AMOUNT {amount} is {type(amount)}")
-                #print(f"${amount:,.4f}")
-        except:
-            print("Command-line argument is not a number")
+            btc_value = float(value_btc)  # Check if the argument is a valid number
+            data = json_data.json()
+            usd_rate = float(data["bpi"]["USD"]["rate"].replace(',', ''))
+            amount = btc_value * usd_rate
+            print(json.dumps(data, indent=2))
+            print(f"${amount:,.4f}")
+        except ValueError:
+            print("Command-line argument is not a valid number")
             sys.exit(1)
     else:
         print("Missing command-line argument")
