@@ -20,9 +20,7 @@ def value_btc(json_data):
                 data = json_data.json()
                 usd = data["bpi"]["USD"]["rate"]
 
-                # Logic convert amount
-                print(f"USD {usd} is {type(usd)}")
-                amount = 0000
+                amount = usd / float(value_btc)
                 print(f"AMOUNT {amount} is {type(amount)}")
                 #print(f"${amount:,.4f}")
         except:
