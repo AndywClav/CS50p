@@ -1,11 +1,11 @@
 from twttr import shorten
 
 def test_twttr():
-    assert shorten()
+    assert shorten("mAmAau") == "mm"
 
 
 def main():
-    test_twttr("mAmaP")
+    test_twttr()
 
 
 if __name__ == "__main__":
