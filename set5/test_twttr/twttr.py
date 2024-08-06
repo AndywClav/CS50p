@@ -1,9 +1,8 @@
-def shorten():
-    twttr = input("Input: ").strip()
+def shorten(word):
     vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U']
     out = ""
 
-    for char in twttr:
+    for char in word:
         if char not in vowels:
             out += char
 
@@ -11,7 +10,8 @@ def shorten():
 
 
 def main():
-    shorten()
+    twttr = input("Input: ").strip()
+    shorten(twttr)
 
 
 if __name__ == "__main__":
