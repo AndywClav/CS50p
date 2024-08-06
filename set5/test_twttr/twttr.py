@@ -10,8 +10,9 @@ def shorten(word):
 
 
 def main():
-    twttr = input("Input: ").strip()
-    shorten(twttr)
+    word = input("Input: ").strip()
+    twttr = shorten(word)
+    print(twttr)
 
 
 if __name__ == "__main__":
