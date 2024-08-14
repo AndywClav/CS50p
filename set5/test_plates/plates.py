@@ -16,12 +16,10 @@ def is_valid(s):
     if not s.isalnum():
         return False
 
-    #has_number = False
     for i in range(len(s)):
         if s[i].isdigit():
             if not s[i:].isdigit():
                 return False
-            #has_number = True
             if s[i] == '0':
                 return False
             break
