@@ -8,5 +8,5 @@ def test_is_valid():
     assert is_valid("CS50") == True
 
 
-if __name == "__main__":
+if __name__ == "__main__":
     main()
