@@ -2,7 +2,10 @@
 def main():
     fraction = input("Fraction: ").strip()
     convert_fraction = convert(fraction)
+    percentage = gauge(convert_fraction)
+
     print(convert_fraction)
+    print(percentage)
 
 def convert(fraction):
     while True:
@@ -21,9 +24,8 @@ def convert(fraction):
 
 
 def gauge(percentage):
-    fraction = convert(fraction)
-    percentage = round(fraction * 100)
-    match percentage:
+    x = round(percentage * 100)
+    match x:
         case 0:
             return f'E'
         case 1:
