@@ -21,7 +21,7 @@ def convert(fraction):
 
 
 def gauge(percentage):
-    fraction = validation()
+    fraction = convert(fraction)
     percentage = round(fraction * 100)
     match percentage:
         case 0:
