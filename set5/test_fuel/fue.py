@@ -13,9 +13,7 @@ def main():
 
 def convert(fraction):
     try:
-        x, y = fraction.split("/")
-        x = int(x)
-        y = int(y)
+        x, y = map(int, fraction.split("/"))
         if x > y or y == 0:
             pass
         resul = x / y
