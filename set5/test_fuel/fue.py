@@ -11,19 +11,18 @@ def main():
 
 
 def convert(fraction):
-    while True:
-        try:
-            x, y = fraction.split("/")
-            x = int(x)
-            y = int(y)
-            if x > y or y == 0:
-                continue
-            resul = x / y
-            return resul
-        except ValueError:
-            return f'ValueError'
-        except ZeroDivisionError:
-            return f'ZeroDivisionError'
+    try:
+        x, y = fraction.split("/")
+        x = int(x)
+        y = int(y)
+        if x > y or y == 0:
+            continue
+        resul = x / y
+        return resul
+    except ValueError:
+        return f'ValueError'
+    except ZeroDivisionError:
+        return f'ZeroDivisionError'
 
 
 def gauge(percentage):
