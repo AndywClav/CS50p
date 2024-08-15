@@ -1,4 +1,9 @@
-def validation():
+
+def main():
+    ...
+
+
+def convert(fraction):
     while True:
         try:
             fraction = input("Fraction: ").strip()
@@ -15,7 +20,7 @@ def validation():
             print(f'ZeroDivisionError')
 
 
-def main():
+def gauge(percentage):
     fraction = validation()
     percentage = round(fraction * 100)
     match percentage:
@@ -39,4 +44,6 @@ def main():
             print('F')
 
 
-main()
+if __name__ == "__main__":
+    main()
+
