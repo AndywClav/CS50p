@@ -1,13 +1,14 @@
 
 def main():
-    fraction = input("Fraction: ").strip()
-    convert_fraction = convert(fraction)
+    while True:
+        fraction = input("Fraction: ").strip()
+        convert_fraction = convert(fraction)
 
-    if isinstance(convert_fraction, float):
-        percentage = gauge(convert_fraction)
-        return print(percentage)
+        if isinstance(convert_fraction, float):
+            percentage = gauge(convert_fraction)
+            return print(percentage)
 
-    print(convert_fraction)
+        print(convert_fraction)
 
 
 def convert(fraction):
@@ -16,7 +17,7 @@ def convert(fraction):
         x = int(x)
         y = int(y)
         if x > y or y == 0:
-            continue
+            pass
         resul = x / y
         return resul
     except ValueError:
