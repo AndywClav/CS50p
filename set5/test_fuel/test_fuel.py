@@ -5,7 +5,7 @@ def main():
 
 
 def test_convert_0():
-    assert gauge() == 'E'
+    assert gauge(0.1) == 'E'
 
 
 def test_convert_0():
