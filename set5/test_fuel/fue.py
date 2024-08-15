@@ -2,10 +2,12 @@
 def main():
     fraction = input("Fraction: ").strip()
     convert_fraction = convert(fraction)
-    percentage = gauge(convert_fraction)
+
+    if ZeroDivisionError != convert_fraction != ValueError:
+        percentage = gauge(convert_fraction)
+        return print(percentage)
 
     print(convert_fraction)
-    print(percentage)
 
 def convert(fraction):
     while True:
