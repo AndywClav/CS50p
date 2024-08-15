@@ -17,7 +17,7 @@ def convert(fraction):
 
         if x > y or y == 0:
             pass
-        
+
         resul = x / y
         return resul
     except ValueError:
