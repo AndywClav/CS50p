@@ -30,24 +30,22 @@ def gauge(percentage):
     round_number = round(percentage * 100)
 
     match round_number:
-        case 0:
-            return f'E'
-        case 1:
-            return f'E'
+        case 0 | 1:
+            return 'E'
         case 25:
-            return f'25%'
+            return '25%'
         case 33:
-            return f'33%'
+            return '33%'
         case 50:
-            return f'50%'
+            return '50%'
         case 67:
-            return f'67%'
+            return '67%'
         case 75:
-            return f'75%'
-        case 99:
-            return f'F'
-        case 100:
-            return f'F'
+            return '75%'
+        case 99 | 100:
+            return 'F'
+        case _:
+            return f'{round_number}%'  # Default case for other percentages
 
 
 if __name__ == "__main__":
