@@ -13,7 +13,7 @@ def test_convert_0():
 
 
 def test_convert_25():
-    percentage = convert("0/1")
+    percentage = convert("1/4")
     assert gauge(percentage) == '25%'
 
 
