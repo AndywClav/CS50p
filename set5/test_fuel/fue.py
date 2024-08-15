@@ -3,11 +3,12 @@ def main():
     fraction = input("Fraction: ").strip()
     convert_fraction = convert(fraction)
 
-    if ZeroDivisionError != convert_fraction != ValueError:
+    if isinstance(convert_fraction, float):
         percentage = gauge(convert_fraction)
         return print(percentage)
 
     print(convert_fraction)
+
 
 def convert(fraction):
     while True:
