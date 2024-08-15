@@ -28,6 +28,7 @@ def convert(fraction):
 
 def gauge(percentage):
     round_number = round(percentage * 100)
+
     match round_number:
         case 0:
             return f'E'
@@ -51,4 +52,3 @@ def gauge(percentage):
 
 if __name__ == "__main__":
     main()
-
