@@ -14,8 +14,10 @@ def main():
 def convert(fraction):
     try:
         x, y = map(int, fraction.split("/"))
+
         if x > y or y == 0:
             pass
+        
         resul = x / y
         return resul
     except ValueError:
@@ -25,8 +27,8 @@ def convert(fraction):
 
 
 def gauge(percentage):
-    x = round(percentage * 100)
-    match x:
+    round_number = round(percentage * 100)
+    match round_number:
         case 0:
             return f'E'
         case 1:
