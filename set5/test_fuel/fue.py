@@ -6,7 +6,10 @@ def main():
 
         if isinstance(convert_fraction, float):
             percentage = gauge(convert_fraction)
-            return print(percentage)
+            if 'F' == percentage or percentage ==  'E':
+                return print(f'{percentage}')
+            else:
+                return print(f'{percentage}%')
 
         print(convert_fraction)
 
@@ -35,7 +38,7 @@ def gauge(percentage):
         case 99 | 100:
             return 'F'
         case _:
-            return f'{round_number}%'
+            return round_number
 
 
 if __name__ == "__main__":
