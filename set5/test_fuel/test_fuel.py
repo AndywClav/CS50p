@@ -25,17 +25,17 @@ def test_fuel_0():
 
 def test_fuel_25():
     percentage = convert("1/4")
-    assert gauge(percentage) == '25%'
+    assert gauge(percentage) == 25
 
 
 def test_fuel_75():
     percentage = convert("9/12")
-    assert gauge(percentage) == '75%'
+    assert gauge(percentage) == 75
 
 
 def test_fuel_100():
     percentage = convert("1/1")
-    assert gauge(percentage) == 'F'
+    assert gauge(percentage) == '
 
 
 if __name__ == "__main__":
