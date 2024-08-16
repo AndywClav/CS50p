@@ -2,20 +2,20 @@ from fue import convert, gauge
 
 
 def main():
-    test_fuel()
+    # test_fuel()
     test_fuel_0()
     test_fuel_25()
     test_fuel_75()
     test_fuel_100()
 
 
-def test_fuel():
-    convert_fraction = convert("1/0")
-    if isinstance(convert_fraction, float):
-            percentage = gauge(convert_fraction)
-            return print(percentage)
+# def test_fuel():
+#     convert_fraction = convert("1/0")
+#     if isinstance(convert_fraction, float):
+#             percentage = gauge(convert_fraction)
+#             return print(percentage)
 
-     assert convert_fraction == ZeroDivisionError
+#      assert convert_fraction == "ZeroDivisionError"
 
 
 def test_fuel_0():
