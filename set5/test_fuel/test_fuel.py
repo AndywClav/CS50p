@@ -3,7 +3,7 @@ from fue import convert, gauge
 
 def main():
     # test_fuel()
-    test_fuel_0()
+    test_fuel()
     test_fuel_25()
     test_fuel_75()
     test_fuel_100()
@@ -18,7 +18,7 @@ def main():
 #      assert convert_fraction == "ZeroDivisionError"
 
 
-def test_fuel_0():
+def test_fuel():
     percentage = convert("0/1")
     assert gauge(percentage) == 'E'
 
