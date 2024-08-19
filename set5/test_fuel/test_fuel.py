@@ -6,7 +6,7 @@ def main():
 
 
 def test_fuel():
-    assert gauge()
+    assert gauge(1) == 'F'
 
 
 if __name__ == "__main__":
