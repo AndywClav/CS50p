@@ -1,4 +1,4 @@
-from fue import convert, gauge
+from fue import gauge
 
 
 def main():
