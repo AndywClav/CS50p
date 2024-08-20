@@ -23,7 +23,7 @@ def test_convert():
     with pytest.raises(ZeroDivisionError):
         convert("1/0")
     with pytest.raises(ValueError):
-        convert("a/b")  # Invalid format
+        convert("a/b")
 
 
 if __name__ == "__main__":
