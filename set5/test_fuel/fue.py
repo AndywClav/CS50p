@@ -1,41 +1,38 @@
-
 def main():
     while True:
         fraction = input("Fraction: ").strip()
-        convert_fraction = convert(fraction)
-
-        if isinstance(convert_fraction, float):
-            percentage = gauge(convert_fraction)
-            return print(percentage)
-
-        print(convert_fraction)
+        try:
+            percentage = convert(fraction)
+            print(gauge(percentage))
+            break
+        except (ValueError, ZeroDivisionError) as e:
+            print(e)
 
 
 def convert(fraction):
     try:
         x, y = map(int, fraction.split("/"))
 
-        if x > y or y == 0:
-            pass
+        if y == 0:
+            raise ZeroDivisionError("Denominator cannot be zero.")
+        if x > y:
+            raise ValueError("Numerator cannot be greater than denominator.")
 
-        resul = x / y
-        return resul
+        result = round((x / y) * 100)
+        return result
+
     except ValueError:
-        return f'ValueError'
-    except ZeroDivisionError:
-        return f'ZeroDivisionError'
+        raise ValueError("Invalid input. Both numerator and denominator must be integers.")
 
 
 def gauge(percentage):
-    round_number = round(percentage * 100)
-
-    match round_number:
+    match percentage:
         case 0 | 1:
             return 'E'
         case 99 | 100:
             return 'F'
         case _:
-            return f'{round_number}%'
+            return f'{percentage}%'
 
 
 if __name__ == "__main__":
