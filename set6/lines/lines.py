@@ -1,4 +1,4 @@
 import sys
 
-for line in sys[2:]:
-    print("d")
+if sys > 1:
+    print("s")
