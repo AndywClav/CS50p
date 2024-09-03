@@ -1,3 +1,4 @@
 import sys
 
-for sys in sys[2:]
+for line in sys[2:]:
+    print("d")
