@@ -5,3 +5,6 @@ if len(sys.argv) > 1:
         match sys.argv:
             case ".md":
                 print("vamos")
+
+
+# Hacer una array para recorrer la cantidad de 
