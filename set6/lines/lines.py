@@ -1,4 +1,7 @@
 import sys
 
 if len(sys.argv) > 1:
-    print("s")
+    if sys.argv == [".md", ".py", ".txt"]:
+        print("'hello'")
+    else:
+        print("vamos")
