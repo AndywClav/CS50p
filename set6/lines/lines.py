@@ -4,7 +4,7 @@ EXTEN = [".md", ".py", ".txt"]
 
 if len(sys.argv) > 1:
     for i in  sys.argv:
-         if i == ".md":
+         if contains():
              print("vamos")
 
 
