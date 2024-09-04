@@ -3,7 +3,7 @@ import sys
 EXTEN = [".md", ".py", ".txt"]
 
 if len(sys.argv) > 1:
-    for sys.argv in len(EXTEN) :
+    for sys.argv in EXTEN:
          if sys.argv == ".md":
              print("vamos")
 
