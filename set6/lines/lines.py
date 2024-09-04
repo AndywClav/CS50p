@@ -2,4 +2,6 @@ import sys
 
 if len(sys.argv) > 1:
     for sys.argv in [".md", ".py", ".txt"]:
-        case: sys.argv
+        match sys.argv:
+            case ".md":
+                print("vamos")
