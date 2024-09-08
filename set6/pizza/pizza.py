@@ -3,6 +3,7 @@ import tabulate
 
 def main():
     filename = validate_arguments()
+
     print(filename)
 
 
@@ -23,7 +24,7 @@ def validate_arguments():
     return filename
 
 
-def formate_csv():
+def table_format_csv():
 
 
 if __name__ == "__main__":
