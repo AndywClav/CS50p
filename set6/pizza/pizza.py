@@ -1,6 +1,6 @@
 from tabulate import tabulate
 import sys
-import csv 
+import csv
 
 def main():
     filename = validate_arguments()
@@ -28,8 +28,8 @@ def validate_arguments():
 def format_file_read(filename):
     try:
         with open(filename, "r") as file:
-            csv = file.read()
-            return csv
+            csv.reader(file, delimiter=' ', quotechar='|')
+
     except FileNotFoundError:
         print("File does not exist ")
         sys.exit
