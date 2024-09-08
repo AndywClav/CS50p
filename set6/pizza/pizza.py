@@ -30,7 +30,7 @@ def format_file_read(filename):
         with open(filename, "r") as file:
             render = csv.DictReader(file)
             for row in render:
-                print(row)
+                print(row[0], row[1], row[2])
 
     except FileNotFoundError:
         print("File does not exist ")
