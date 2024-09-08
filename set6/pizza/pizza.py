@@ -11,10 +11,10 @@ def main():
 def validate_arguments():
     if len(sys.argv) < 2:
         print("Too few command-line arguments")
-        sys.exit
+        sys.exit(1)
     elif len(sys.argv) > 2:
         print("Too many command-line arguments")
-        sys.exit
+        sys.exit(1)
 
     filename = sys.argv[1]
 
@@ -38,7 +38,7 @@ def format_file_read(filename):
 
     except FileNotFoundError:
         print("File does not exist ")
-        sys.exit
+        sys.exit(1)
 
 
 if __name__ == "__main__":
