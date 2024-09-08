@@ -5,7 +5,7 @@ import csv
 def main():
     filename = validate_arguments()
     table_csv = format_file_read(filename)
-    print(tabulate(table_csv, tablefmt="grid"))
+    print(tabulate(table_csv, headers="firstrow", tablefmt="grid"))
 
 
 def validate_arguments():
@@ -26,14 +26,10 @@ def validate_arguments():
 
 
 def format_file_read(filename):
-    restaurant = []
     try:
         with open(filename, "r") as file:
             render = csv.reader(file)
-            for row in render:
-                restaurant.append({"Name_Restaurant": row[0], "Small": row[1], "Large": row[2]})
-
-            return restaurant
+            return render
 
 
     except FileNotFoundError:
