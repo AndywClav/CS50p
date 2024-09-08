@@ -27,6 +27,7 @@ def validate_arguments():
 def format_csv(filename):
     try:
         with open(filename, "r") as file:
+            file.
             return file
     except FileNotFoundError:
         print("File does not exist ")
