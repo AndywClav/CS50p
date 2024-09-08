@@ -1,5 +1,6 @@
-import sys
 from tabulate import tabulate
+import sys
+import csv 
 
 def main():
     filename = validate_arguments()
