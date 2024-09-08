@@ -24,7 +24,9 @@ def validate_arguments():
     return filename
 
 
-def format_csv():
+def format_csv(filename):
+    with open(filename, "r") as file:
+        return file
 
 
 if __name__ == "__main__":
