@@ -4,7 +4,7 @@ import tabulate
 def main():
     filename = validate_arguments()
     table_csv = format_file_read(filename)
-    print(table_csv)
+    print(tabulate(table_csv, headers, tablefmt="grid"))
 
 
 def validate_arguments():
