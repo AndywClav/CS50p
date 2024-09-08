@@ -31,7 +31,7 @@ def format_file_read(filename):
         with open(filename, "r") as file:
             render = csv.reader(file)
             for row in render:
-                restaurant.append({"name": row[0], "home": row[1]})
+                restaurant.append({"Name_Restaurant": row[0], "Small": row[1], "Large": row[2]})
 
             return restaurant
 
