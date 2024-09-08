@@ -5,7 +5,7 @@ import csv
 def main():
     filename = validate_arguments()
     table_csv = format_file_read(filename)
-    # print(tabulate(table_csv, tablefmt="grid"))
+    print(tabulate(table_csv, tablefmt="grid"))
 
 
 def validate_arguments():
@@ -26,11 +26,15 @@ def validate_arguments():
 
 
 def format_file_read(filename):
+    restaurant = []
     try:
         with open(filename, "r") as file:
             render = csv.DictReader(file)
-            for line in file:
-        name, house = line.rstrip().split(",")
+            for row in render:
+                restaurant.append({"name": row[0], "home": row[1]})
+
+            return restaurant
+
 
     except FileNotFoundError:
         print("File does not exist ")
