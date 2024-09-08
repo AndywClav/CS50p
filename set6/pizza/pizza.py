@@ -25,8 +25,12 @@ def validate_arguments():
 
 
 def format_csv(filename):
-    with open(filename, "r") as file:
-        return file
+    try:
+        with open(filename, "r") as file:
+            return file
+    except FileNotFoundError:
+        print("File does not exist ")
+        sys.exit
 
 
 if __name__ == "__main__":
