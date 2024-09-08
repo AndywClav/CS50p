@@ -29,8 +29,8 @@ def format_file_read(filename):
     try:
         with open(filename, "r") as file:
             render = csv.DictReader(file)
-            for row in render:
-                print(row[0], row[1], row[2])
+            for line in file:
+        name, house = line.rstrip().split(",")
 
     except FileNotFoundError:
         print("File does not exist ")
