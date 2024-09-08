@@ -1,5 +1,5 @@
 import sys
-import tabulate
+from tabulate import tabulate
 
 def main():
     filename = validate_arguments()
