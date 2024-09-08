@@ -3,7 +3,7 @@ import tabulate
 
 def main():
     filename = validate_arguments()
-    table_csv = format_csv(filename)
+    table_csv = format_file_read(filename)
     print(table_csv)
 
 
@@ -24,11 +24,11 @@ def validate_arguments():
     return filename
 
 
-def format_csv(filename):
+def format_file_read(filename):
     try:
         with open(filename, "r") as file:
-            file.
-            return file
+            csv = file.read()
+            return csv
     except FileNotFoundError:
         print("File does not exist ")
         sys.exit
