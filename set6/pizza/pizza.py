@@ -28,7 +28,7 @@ def validate_arguments():
 def format_file_read(filename):
     try:
         with open(filename, "r") as file:
-            csv.reader(file, delimiter=' ', quotechar='|')
+            render = csv.Di
 
     except FileNotFoundError:
         print("File does not exist ")
