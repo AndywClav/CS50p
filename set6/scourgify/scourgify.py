@@ -1,6 +1,10 @@
 import sys
 import csv
 
+def main():
+    validate_arguments()
+
+
 def validate_arguments():
     if len(sys.argv) < 2:
         print("Too few command-line arguments")
@@ -8,7 +12,7 @@ def validate_arguments():
     elif len(sys.argv) > 2:
         print("Too many command-line arguments")
         sys.exit(1)
-
+    print(sys.argv)
     filename = sys.argv[1]
 
     if not filename.endswith(".csv"):
@@ -27,3 +31,7 @@ def file_read(filename):
     except FileNotFoundError:
         print("File does not exist ")
         sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()
