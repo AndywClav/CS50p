@@ -1,3 +1,6 @@
+import sys
+import csv
+
 def validate_arguments():
     if len(sys.argv) < 2:
         print("Too few command-line arguments")
@@ -20,7 +23,7 @@ def file_read(filename):
         with open(filename, "r") as file:
             render = csv.reader(file)
             return list(render)
-        
+
     except FileNotFoundError:
         print("File does not exist ")
         sys.exit(1)
