@@ -4,8 +4,7 @@ import csv
 def main():
     filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
-    print(filename, new_filanme)
-    print(list_filename)
+
 
 
 def validate_arguments():
@@ -35,6 +34,9 @@ def file_read(filename):
     except FileNotFoundError:
         print("File does not exist ")
         sys.exit(1)
+
+
+def file_write(new_filename):
 
 
 if __name__ == "__main__":
