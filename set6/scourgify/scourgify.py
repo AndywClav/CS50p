@@ -3,7 +3,9 @@ import csv
 
 def main():
     filaname, new_filanme = validate_arguments()
+    list_filename = file_read(filename)
     print(filaname, new_filanme)
+    print(list_filename)
 
 
 def validate_arguments():
