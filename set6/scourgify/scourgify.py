@@ -12,14 +12,15 @@ def validate_arguments():
     elif len(sys.argv) > 3:
         print("Too many command-line arguments")
         sys.exit(1)
-    print(sys.argv)
-    filename = sys.argv[1]
 
-    if not filename.endswith(".csv"):
+    filename = sys.argv[1]
+    new_filename = sys.argv[2]
+
+    if not filename.endswith(".csv") and new_filename:
         print("Not a Csv file")
         sys.exit(1)
 
-    return filename
+    return filename, new_filename
 
 
 def file_read(filename):
