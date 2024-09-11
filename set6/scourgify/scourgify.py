@@ -6,10 +6,10 @@ def main():
 
 
 def validate_arguments():
-    if len(sys.argv) < 2:
+    if len(sys.argv) < 3:
         print("Too few command-line arguments")
         sys.exit(1)
-    elif len(sys.argv) > 2:
+    elif len(sys.argv) > 3:
         print("Too many command-line arguments")
         sys.exit(1)
     print(sys.argv)
