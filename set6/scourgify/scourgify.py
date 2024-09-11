@@ -4,7 +4,7 @@ import csv
 def main():
     filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
-
+    file_write(new_filanme, list_filename)
 
 
 def validate_arguments():
@@ -36,9 +36,9 @@ def file_read(filename):
         sys.exit(1)
 
 
-def file_write(new_filename):
+def file_write(new_filename, filename):
     with open(new_filename, "a") as file:
-            render = csv.reader(file)
+            file.writable(filename)
 
 
 if __name__ == "__main__":
