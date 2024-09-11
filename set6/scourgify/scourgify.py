@@ -38,7 +38,7 @@ def file_read(filename):
 
 def file_write(new_filename, filename):
     with open(new_filename, "a") as file:
-            file.writable(filename)
+            file.write(filename)
 
 
 if __name__ == "__main__":
