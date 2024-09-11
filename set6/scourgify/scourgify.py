@@ -2,7 +2,8 @@ import sys
 import csv
 
 def main():
-    validate_arguments()
+    filaname, new_filanme = validate_arguments()
+    print(filaname, new_filanme)
 
 
 def validate_arguments():
