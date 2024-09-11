@@ -4,7 +4,11 @@ import csv
 def main():
     filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
-    file_write(new_filanme, list_filename)
+
+    for _ in list_filename:
+        
+
+    #file_write(new_filanme, list_filename)
 
 
 def validate_arguments():
@@ -38,7 +42,8 @@ def file_read(filename):
 
 def file_write(new_filename, filename):
     with open(new_filename, "a") as file:
-            file.write(filename)
+            writer = csv.writer(file)
+            writer.writerows(filename)
 
 
 if __name__ == "__main__":
