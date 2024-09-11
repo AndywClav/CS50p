@@ -2,9 +2,9 @@ import sys
 import csv
 
 def main():
-    filaname, new_filanme = validate_arguments()
+    filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
-    print(filaname, new_filanme)
+    print(filename, new_filanme)
     print(list_filename)
 
 
