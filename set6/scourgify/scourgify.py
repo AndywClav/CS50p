@@ -37,6 +37,8 @@ def file_read(filename):
 
 
 def file_write(new_filename):
+    with open(new_filename, "a") as file:
+            render = csv.reader(file)
 
 
 if __name__ == "__main__":
