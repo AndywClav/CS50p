@@ -44,13 +44,13 @@ def format_names(filename):
         name = row[0]
         house = row[1]
         print(row)
-        last_name, first_name = name.split(", ")
-        formatted_name = f"{last_name.lower()} {first_name.lower()}"
+        #last_name, first_name = name.split(", ")
+        #formatted_name = f"{last_name.lower()} {first_name.lower()}"
 
         formatted_list.append([formatted_name, house])
 
-    return formatted_list
-
+    #return formatted_list
+    print(formatted_list)
 
 def file_write(new_filename, filename):
     with open(new_filename, "a") as file:
