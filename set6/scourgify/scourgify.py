@@ -43,7 +43,7 @@ def format_names(filename):
     for row in filename:
         name = row[0]
         house = row[1]
-        print()
+        print(row)
         last_name, first_name = name.split(", ")
         formatted_name = f"{last_name.lower()} {first_name.lower()}"
 
