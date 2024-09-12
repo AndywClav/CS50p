@@ -5,7 +5,7 @@ def main():
     filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
     format_filename = format_names(list_filename)
-    file_write(new_filanme, format_filename)
+    #file_write(new_filanme, format_filename)
 
 
 def validate_arguments():
@@ -43,7 +43,7 @@ def format_names(filename):
     for row in filename:
         name = row[0]
         house = row[1]
-
+        print()
         last_name, first_name = name.split(", ")
         formatted_name = f"{last_name.lower()} {first_name.lower()}"
 
