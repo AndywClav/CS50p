@@ -4,11 +4,8 @@ import csv
 def main():
     filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
-
-    for _ in list_filename:
-        
-
-    #file_write(new_filanme, list_filename)
+    format_filename = format_names(list_filename)
+    file_write(new_filanme, format_filename)
 
 
 def validate_arguments():
@@ -38,6 +35,21 @@ def file_read(filename):
     except FileNotFoundError:
         print("File does not exist ")
         sys.exit(1)
+
+
+def format_names(filename):
+    formatted_list = []
+
+    for row in filename:
+        name = row[0]
+        house = row[1]
+
+        last_name, first_name = name.split(", ")
+        formatted_name = f"{last_name.lower()} {first_name.lower()}"
+
+        formatted_list.append([formatted_name, house])
+
+    return formatted_list
 
 
 def file_write(new_filename, filename):
