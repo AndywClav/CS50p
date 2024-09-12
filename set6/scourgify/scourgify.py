@@ -47,7 +47,7 @@ def format_names(filename):
 
         if ", " in name:
             last_name, first_name = name.split(", ")
-            formatted_name = f"{last_name.lower()} {first_name.lower()}"
+            formatted_name = f""{last_name.lower()} {first_name.lower()}""
         else:
             formatted_name = name.lower()
 
