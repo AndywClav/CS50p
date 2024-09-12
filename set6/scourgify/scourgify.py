@@ -6,7 +6,7 @@ def main():
     filename, new_filanme = validate_arguments()
     list_filename = file_read(filename)
     format_filename = format_names(list_filename)
-    # file_write(new_filanme, format_filename)
+    file_write(new_filanme, format_filename)
 
 
 def validate_arguments():
@@ -53,8 +53,7 @@ def format_names(filename):
 
         formatted_list.append([formatted_name, house])
 
-    # return formatted_list
-    print(formatted_list)
+    return formatted_list
 
 
 def file_write(new_filename, filename):
