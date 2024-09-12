@@ -44,7 +44,7 @@ def format_names(filename):
         name = row[0]
         house = row[1]
         print(row)
-        #last_name, first_name = name.split(", ")
+        last_name, first_name = name.split(", ")
         #formatted_name = f"{last_name.lower()} {first_name.lower()}"
 
         #formatted_list.append([formatted_name, house])
