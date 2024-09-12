@@ -47,10 +47,10 @@ def format_names(filename):
         #last_name, first_name = name.split(", ")
         #formatted_name = f"{last_name.lower()} {first_name.lower()}"
 
-        formatted_list.append([formatted_name, house])
+        #formatted_list.append([formatted_name, house])
 
     #return formatted_list
-    print(formatted_list)
+
 
 def file_write(new_filename, filename):
     with open(new_filename, "a") as file:
