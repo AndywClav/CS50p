@@ -41,17 +41,19 @@ def file_read(filename):
 def format_names(filename):
     formatted_list = []
 
+    formatted_list.append(["first", "last", "house"])
+
     for row in filename:
-        name = row[0]
+        name = row[0]  
         house = row[1]
 
         if ", " in name:
             last_name, first_name = name.split(", ")
-            formatted_name = f"{last_name.lower()} {first_name.lower()}"
         else:
-            formatted_name = name.lower()
+            print(f"Error in format: {name}")
+            continue
 
-        formatted_list.append([formatted_name, house])
+        formatted_list.append([first_name, last_name, house])
 
     return formatted_list
 
