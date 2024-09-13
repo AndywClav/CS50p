@@ -59,8 +59,8 @@ def format_names(filename):
 
 
 def file_write(new_filename, filename):
-    with open(new_filename, "a") as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_NONE)
+    with open(new_filename, "a",  newline='') as file:
+        writer = csv.writer(file, quoting=csv.QUOTE_NONE, escapechar='\\')
         writer.writerows(filename)
 
 
