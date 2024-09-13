@@ -59,9 +59,11 @@ def format_names(filename):
 
 
 def file_write(new_filename, filename):
-    with open(new_filename, "a",  newline='') as file:
+    with open(new_filename, "w", newline='') as file:
         writer = csv.writer(file, quoting=csv.QUOTE_NONE, escapechar='\\')
-        writer.writerows(filename)
+        writer.writerow(filename[0])
+        writer = csv.writer(file, quoting=csv.QUOTE_MINIMAL)
+        writer.writerows(filename[1:])
 
 
 if __name__ == "__main__":
