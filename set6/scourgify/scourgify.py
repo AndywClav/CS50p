@@ -44,7 +44,7 @@ def format_names(filename):
     formatted_list.append(["first", "last", "house"])
 
     for row in filename:
-        name = row[0]  
+        name = row[0]
         house = row[1]
 
         if ", " in name:
@@ -60,7 +60,7 @@ def format_names(filename):
 
 def file_write(new_filename, filename):
     with open(new_filename, "a") as file:
-        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(file, quoting=csv.QUOTE_NONE)
         writer.writerows(filename)
 
 
