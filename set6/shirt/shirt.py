@@ -18,5 +18,16 @@ def validate_arguments():
     return filename, new_filename
 
 
+def file_read(filename):
+    try:
+        with open(filename, "r") as file:
+            render = csv.reader(file)
+            return list(render)
+
+    except FileNotFoundError:
+        print("File does not exist ")
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     main()
