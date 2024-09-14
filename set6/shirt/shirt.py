@@ -15,12 +15,8 @@ def validate_arguments():
     filename = sys.argv[1]
     new_filename = sys.argv[2]
 
-    if not filename.endswith(".csv") and new_filename:
-        print("Input and output have different extensions")
-        sys.exit(1)
-
     return filename, new_filename
 
 
-if __main__ == "__main__":
+if __name__ == "__main__":
     main()
