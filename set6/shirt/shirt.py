@@ -5,7 +5,7 @@ import os
 def main():
     filename, new_filanme = validate_arguments()
     print(filename, new_filanme)
-    shirt = PiImage.open("shirt.png")
+    shirt = Pillow.Image.open("shirt.png")
     print(shirt)
 
 
