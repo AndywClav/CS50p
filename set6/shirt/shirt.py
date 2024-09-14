@@ -1,5 +1,5 @@
 import sys
-import os 
+import os
 
 def main():
     validate_arguments()
@@ -16,8 +16,12 @@ def validate_arguments():
     filename = sys.argv[1]
     new_filename = sys.argv[2]
 
-    if not "." in filename and new_filename:
-        print(Invalid input")
+    if not os.path.splitext(filename)[1] or not os.path.splitext(new_filename)[1]:
+        print("Invalid input: Both files must have a valid extension")
+        sys.exit(1)
+
+    if os.path.splitext(filename)[1] != os.path.splitext(new_filename)[1]:
+        print("Input and output have different extensions")
         sys.exit(1)
 
     return filename, new_filename
