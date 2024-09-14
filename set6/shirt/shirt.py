@@ -1,5 +1,6 @@
 import sys
 import os
+import Pillow
 
 def main():
     filename, new_filanme = validate_arguments()
