@@ -1,10 +1,12 @@
+import Pillow
 import sys
 import os
-import Pillow
 
 def main():
     filename, new_filanme = validate_arguments()
     print(filename, new_filanme)
+    shirt = PiImage.open("shirt.png")
+    print(shirt)
 
 
 def validate_arguments():
