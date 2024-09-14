@@ -2,7 +2,8 @@ import sys
 import os
 
 def main():
-    validate_arguments()
+    filename, new_filanme = validate_arguments()
+    print(filename, new_filanme)
 
 
 def validate_arguments():
