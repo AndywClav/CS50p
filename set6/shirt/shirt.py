@@ -1,11 +1,11 @@
-import Pil
+from PIL import Image
 import sys
 import os
 
 def main():
-    filename, new_filanme = validate_arguments()
-    print(filename, new_filanme)
-    shirt = Pil.Image.open("shirt.png")
+    filename, new_filaname = validate_arguments()
+    print(filename, new_filaname)
+    shirt = Image.open("shirt.png")
     print(shirt)
 
 
