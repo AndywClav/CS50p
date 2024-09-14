@@ -7,6 +7,7 @@ def main():
     print(filename, new_filaname)
     shirt = Image.open("shirt.png")
     size = shirt.size
+    photo.paste(shirt, shirt)
     print(size)
 
 
