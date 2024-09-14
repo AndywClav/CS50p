@@ -6,7 +6,8 @@ def main():
     filename, new_filaname = validate_arguments()
     print(filename, new_filaname)
     shirt = Image.open("shirt.png")
-    print(shirt)
+    size = shirt.size
+    print(size)
 
 
 def validate_arguments():
