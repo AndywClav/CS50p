@@ -6,9 +6,11 @@ def main():
     filename, new_filaname = validate_arguments()
     print(filename, new_filaname)
     shirt = Image.open("shirt.png")
+    photo = Image.open("before1.jpg")
     size = shirt.size
     photo.paste(shirt, shirt)
     print(size)
+    print(photo)
 
 
 def validate_arguments():
