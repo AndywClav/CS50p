@@ -16,7 +16,7 @@ def validate_arguments():
     new_filename = sys.argv[2]
 
     if not "." in filename and new_filename:
-        print("Input and output have different extensions")
+        print(Invalid input")
         sys.exit(1)
 
     return filename, new_filename
