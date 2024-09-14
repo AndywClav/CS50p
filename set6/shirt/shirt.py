@@ -1,11 +1,11 @@
-import Pillow
+import Pil
 import sys
 import os
 
 def main():
     filename, new_filanme = validate_arguments()
     print(filename, new_filanme)
-    shirt = Pillow.Image.open("shirt.png")
+    shirt = Pil.Image.open("shirt.png")
     print(shirt)
 
 
