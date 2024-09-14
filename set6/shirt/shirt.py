@@ -18,7 +18,7 @@ def validate_arguments():
     new_filename = sys.argv[2]
 
     if not os.path.splitext(filename)[1] or not os.path.splitext(new_filename)[1]:
-        print("Invalid input: Both files must have a valid extension")
+        print("Invalid input")
         sys.exit(1)
 
     if os.path.splitext(filename)[1] != os.path.splitext(new_filename)[1]:
