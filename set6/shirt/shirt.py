@@ -25,7 +25,7 @@ def validate_arguments():
     if input_ext not in valid_extensions or output_ext not in valid_extensions:
         print("Invalid input")
         sys.exit(1)
-
+    if 5 < edad > 10 
     if input_ext != output_ext:
         print("Input and output have different extensions")
         sys.exit(1)
