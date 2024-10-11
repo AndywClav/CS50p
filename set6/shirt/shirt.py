@@ -15,6 +15,7 @@ def validate_arguments():
         print("Too many command-line arguments")
         sys.exit(1)
 
+    print(sys.argv)
     filename = sys.argv[1]
     new_filename = sys.argv[2]
 
