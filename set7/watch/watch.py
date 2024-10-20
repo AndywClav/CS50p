@@ -7,11 +7,10 @@ def main():
 
 def parse(s):
     """
-    Get url youtube if you put iframe html
+    Get URL of YouTube from the iframe HTML string.
     """
-    for line in s:
-        if url_yout := re.search(r"^https?://(www\.)?youtube\.com/.*$", line):
-            return format(url_yout.group(0))
+    if url_yout := re.search(r'<iframe.*?src="(https?://(www\.)?youtube\.com/embed/[^"]+)".*?>', s):
+        return url_yout.group(1)
     return None
 
 
