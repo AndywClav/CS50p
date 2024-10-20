@@ -9,10 +9,10 @@ def parse(s):
     """
     Get url youtube if you put iframe html
     """
-    if url_yout := re.search(r"^https?://(www\.)?youtube\.com/.*$", s):
-        return format(url_yout.group(0))
-    else:
-        if  in:
+    for line in s:
+        if url_yout := re.search(r"^https?://(www\.)?youtube\.com/.*$", s):
+            return format(url_yout.group(0))
+
 
 
 
