@@ -11,7 +11,9 @@ def parse(s):
     """
     if url_yout := re.search(r'<iframe.*?src="?(https?://(www\.)?youtube\.com/embed/[^"]+)"?.*?>', s):
         return url_yout.group(1)
-    return None
+    elif url_yout
+    else:
+        None
 
 
 if __name__ == "__main__":
