@@ -1,20 +1,21 @@
 import re
 
-
 def main():
     print(parse(input("HTML: ")))
 
 
 def parse(s):
     """
-    Get URL of YouTube from the iframe HTML string.
+    Extract and convert a YouTube URL from an iframe HTML string to a shortened youtu.be format.
     """
-    if url_yout := re.search(r'<iframe.*?src="?(https?://(www\.)?youtube\.com/embed/[^"]+)"?.*?>', s):
-        return url_yout.group(1)
-    elif url_yout == re.search(r"^https?://(www\.)?youtube\.com/.*$", s).group(0):
-        return url_yout
-    else:
+    url_yout_iframe = r'<iframe.*?src="(https?://(?:www\.)?youtube\.com/embed/([^"]+))".*?></iframe>$'
+    url_match = re.search(url_yout_iframe, s)
+
+    if not url_match:
         return None
+
+    video_id = url_match.group(2)
+    return f"https://youtu.be/{video_id}"
 
 
 if __name__ == "__main__":
