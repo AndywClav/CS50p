@@ -5,6 +5,10 @@ def main():
 
 
 def validation_email(s):
+    """
+    This function do a valid to email if the email is
+    correct print valid else print invalid
+    """
     try:
         validators.email(s)
         return f"Valid"
