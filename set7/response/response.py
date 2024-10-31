@@ -4,8 +4,12 @@ def main():
     print(validation(input("What's your email address? ")))
 
 
-def validation(email):
-    return email
+def validation(e):
+    try:
+        validators.email()
+        return f"Valid"
+    except ValueError:
+        return f"Invalid"
 
 
 if __name__ == "__main__":
