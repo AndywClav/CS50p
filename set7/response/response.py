@@ -1,16 +1,16 @@
 from validator_collection import validators
 
 def main():
-    print(validation_email(input("What's your email address? ")))
+    print(validate_email(input("What's your email address? ")))
 
 
-def validation_email(s):
+def validate_email(email):
     """
     This function validates an email address. It prints "valid"
     if the email format is correct, otherwise it prints "invalid".
     """
     try:
-        validators.email(s)
+        validators.email(email)
         return f"Valid"
     except ValueError:
         return f"Invalid"
