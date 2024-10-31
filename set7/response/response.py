@@ -4,9 +4,9 @@ def main():
     print(validation(input("What's your email address? ")))
 
 
-def validation(e):
+def validation(em):
     try:
-        validators.email()
+        validators.email(em)
         return f"Valid"
     except ValueError:
         return f"Invalid"
