@@ -6,8 +6,8 @@ def main():
 
 def validation_email(s):
     """
-    This function do a valid to email if the email is
-    correct print valid else print invalid
+    This function validates an email address. It prints "valid"
+    if the email format is correct, otherwise it prints "invalid".
     """
     try:
         validators.email(s)
