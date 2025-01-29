@@ -42,6 +42,8 @@ if __name__ == "__main__":
 # requests
 # sys
 # cowsay
+# statistics
+# pytest
 
 
 
