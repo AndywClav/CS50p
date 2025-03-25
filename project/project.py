@@ -1,71 +1,135 @@
 import random
+import sys
+import cowsay
+from fpdf import FPDF
+
+MAX_ATTEMPTS: int = 2
+TITLE_OPENING: str = "Welcome to my project! 😝"
+TITLE: str = "SUDOKU"
+
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("Arial", '', 14)
+
+class Sudoku:
+    def __init__(self, size: int, difficulty: str, name_file: str = None):
+        size = 2 if size == 1 else 3
+
+        self.box_size = size
+        self.size = size * size
+        self.board = [[0] * self.size for _ in range(self.size)]
+
+        self.name_file = name_file if name_file is not None else "solve.pdf"
+
+        self.generate_board()
+        self.remove_numbers(difficulty)
+        self.display()
+
+
+    def generate_board(self):
+        base = [[(i * self.box_size + i // self.box_size + j) % self.size + 1
+                 for j in range(self.size)] for i in range(self.size)]
+
+        self.shuffle_board(base)
+        self.board = base
+
+
+    def shuffle_board(self, board):
+        for _ in range(10):
+            self.shuffle_rows(board)
+            self.shuffle_columns(board)
+
+
+    def shuffle_rows(self, board):
+        for i in range(0, self.size, self.box_size):
+            random.shuffle(board[i:i + self.box_size])
+
+
+    def shuffle_columns(self, board):
+        for i in range(0, self.size, self.box_size):
+            cols = list(zip(*board))
+            random.shuffle(cols[i:i + self.box_size])
+            board[:] = [list(row) for row in zip(*cols)]
+
+
+    def remove_numbers(self, difficulty: str):
+        difficulty_levels = {"easy": 0.2, "medium": 0.4, "hard": 0.6}
+        percent_to_remove = difficulty_levels.get(difficulty, 0.4)
+
+        num_to_remove = int(self.size * self.size * percent_to_remove)
+        positions = [(i, j) for i in range(self.size) for j in range(self.size)]
+        random.shuffle(positions)
+
+        for i, j in positions[:num_to_remove]:
+            self.board[i][j] = 0
+
+
+    def display(self):
+        pdf.cell(0, 10, TITLE, ln=True, align='C')
+
+        for i, row in enumerate(self.board):
+            if i % self.box_size == 0 and i != 0:
+                print("-" * (self.size * 2 + self.box_size - 1))
+
+            row_str = ""
+            for j, num in enumerate(row):
+                if j % self.box_size == 0 and j != 0:
+                    row_str += "| "
+                row_str += (str(num) if num != 0 else ".") + " "
+
+            pdf.cell(0, 20, row_str, ln=True)
+
+        pdf.output(self.name_file)
+
 
 def choose_square_size(square_size: str) -> int:
     """
-    The user to select a square size (2x2 or 3x3), or picks randomly if invalid.
+    Asks the user to select a square size (2x2 or 3x3).
+    If the input is invalid, the user gets two attempts before
+    a random size (1 or 2) is selected automatically.
     """
-    MAX_ATTEMPTS: int = 2
-    count: int = 0
-
-    while True:
+    for _ in range(MAX_ATTEMPTS):
         if square_size in {"1", "2"}:
-            break
-
-        if count == MAX_ATTEMPTS:
-            square_size = random.randint(1, 2)
-            print(f"Your square was random.\n It's {square_size}.\n")
-            break
-
+            return int(square_size)
         print("Invalid input. Please enter a valid option.")
-        input("")
+        square_size = input("").strip()
 
-        count += 1
+    return random.randint(1, 2)
 
-    return int(square_size)
+
+def sys_square_size(value: str) -> int:
+    """
+    Returns the integer value if it is '1' or '2'.
+    Otherwise, returns a random number (1 or 2).
+    """
+    return int(value) if value in {"1", "2"} and value.isdigit() else random.randint(1, 2)
+
+
+def get_random_difficulty():
+    """Returns a random Sudoku difficulty level."""
+    return random.choice(["easy", "medium", "hard"])
 
 
 def main():
-    TITLEO_PENING: str = "Welcome to my game! 😝"
-    TITLE: str = "SUDOKU"
-    character = "-" * (len(TITLEO_PENING) + 4)
-    print(f"{character}\n| {TITLEO_PENING} |\n{character}\n")
+    character = "-" * (len(TITLE_OPENING) + 4)
+    print(f"{character}\n| {TITLE_OPENING} |\n{character}\n")
 
-    size: int = choose_square_size(input(" What square do you want?\n Option 1: 2x2\n Option 2: 3x3\n[PLS] only number :)\n").strip())
+    size = (
+        choose_square_size(
+            input(
+                " What square do you want?\n"
+                " Option 1: 2x2\n"
+                " Option 2: 3x3\n"
+                " [PLS] only number :)\n"
+                ).strip())
+            if len(sys.argv) != 2 else sys_square_size(sys.argv[1])
+        )
 
-    print(TITLE)
+    cowsay.miki(TITLE)
+
+    sudoku = Sudoku(size, difficulty=get_random_difficulty())
+    sudoku.display()
 
 
 if __name__ == "__main__":
     main()
-
-# json
-# requests
-# sys
-# cowsay
-# statistics
-# pytest
-# open
-# csv
-# PIL
-# re
-# argparse
-
-
-
-# Implementar Titulo grande, bien lindo de la libreria
-# Estructure of cuadrade 2x2 or 2^2
-# print("1 2 4 3 ")
-# print("3 4 2 1 ")
-# print("2 1 3 4 ")
-# print("4 3 1 2 ")
-# print("[1][2][4][3]\n"
-#       "[3][4][2][1]\n"
-#       "[2][1][3][4]\n"
-#       "[4][3][1][2]")
-
-
-# the cuadrade is a potential, Ej 2^2 = 4
-#                                 3^3 = 9
-# My game only have 2 table
-
-
